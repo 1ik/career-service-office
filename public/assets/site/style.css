@@ -1,0 +1,512 @@
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+
+svg{
+	width : 0px;
+	height : 0px;
+}
+
+
+
+
+
+
+body {
+	background-image: url(../img/bg/body_bg.png);
+}
+
+p{
+	font-family: Segoe UI;
+}
+
+.topheader {
+	background-color: #F2F2F2;
+	padding : 20px;
+}
+
+.navbar-inverse {
+	background-color: #1C548C;
+	border-bottom: 8px solid #033F60;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	color: white;
+	background-color: #033F60;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	padding-top: 25px;
+}
+
+.navbar-inverse .navbar-nav > li {
+	font-family: Segoe UI;
+	font-weight: 700;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.navbar-inverse {
+		font-size: 12px;
+		border-bottom: 8px solid #033F60;
+	}
+	.menu .nav .navbar-nav ul li{
+		padding-left: 0px;
+	}
+}
+
+.site-info, .site-info h2 {
+	font-family: Segoe UI;
+}
+
+.site-info img {
+	margin-right: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+	.site-info {
+		text-align: right; /* float right only for desktop and notebooks */
+	}
+	.site-info h2, .site-info p {
+		padding-right : 10px;
+	}
+	.site-info p {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.site-info {
+		text-align: center; /* allign center for mid and low level devices */
+	}
+}
+
+#page_heading h1 {
+	
+}
+
+
+
+
+/**************Message ****************/
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/MyriadPro-Regular.otf'); 
+}
+
+#message_section{
+	text-align : center;
+	color : #9E005D;
+}
+
+#message_section h3{
+	font-family : 'MyriadPro';
+	font-weight : 700;
+	
+}
+
+
+/******* Main COntent *************/
+
+.mainContent{
+	background-color  : #F2F2F2;
+	margin-bottom: 30px;
+	box-shadow : 0px 0px 4px 0px #888888;
+	-webkit-box-shadow : 0px 0px 4px 0px #888888;
+	padding-bottom : 30px;
+}
+
+/* sdiebar left */
+.sidebar-left {
+	margin-top: 20px;
+	background-color : #ffffff;
+	margin-left : 10px;
+}
+
+#sidebar-region {
+
+}
+
+.sidebar-left-heading {
+	position : relative;
+	top : 25px;
+	background-color : #1C548C;
+	height : 80px;
+	width : 107%;
+	left : -10px;
+}
+
+/* RIBBON TRIANGLE */
+
+	.triangle-r {
+		border-color: transparent transparent transparent #1C548C;
+		border-style:solid;
+		border-width:15px;
+		height:0px;
+		width:0px;
+		position: relative;
+		left: 96%;
+		top: 81%;
+	}
+
+
+@media screen and (max-width: 985px) {
+	.triangle-r {
+		display : none; /* no riboons for mid and low level devices */
+	}
+	.sidebar-left-heading {
+		background-color : #1C548C;
+		height : 80px;
+		width : 100%;
+		left : 0px;
+	}
+	.sidebar-left {
+		margin-left: 0px;
+	}
+		
+}
+
+.sidebar-left-heading h3{
+	position : relative;
+	font-family: Segoe UI;
+	color : white;
+	top : -90%;
+	margin-left: 80px;
+	font-weight: 700;
+}
+
+#sidebar-latests {
+	margin-top : 2em;
+	padding-bottom : 1em;
+}
+
+.sidebar-left .entry{
+	width : 85%;
+	padding : 2px;
+	margin-left : 2.6em;
+	
+}
+
+
+/* Login section */
+.login-form{
+	width : 80%;
+	padding : 25px;
+	margin-top : 60px;
+	margin-left : 20px;
+	border-bottom: 1px solid #F2F2F2;
+
+}	
+#login {
+	margin-top: 20px;
+}
+
+#login input{
+	margin-bottom : 20px;
+}
+#signup p{
+	font-size: 16px;
+	font-weight: 700;
+	
+}
+
+.signup-icon{
+	background-position: 0px 6px;
+	width : 50px;
+	top : 20px;
+	position : relative;
+	height : 40px;
+	margin-left: 5px;
+}
+
+.student {
+	background: url("../img/icons/homework.svg") no-repeat;
+	
+}
+
+.employer{
+	background: url("../img/icons/job.svg") no-repeat;
+}
+
+.student , .employer{
+	background-position : 7px 0px;
+}
+
+.al{
+	background: url("../img/icons/graduated.svg") no-repeat;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 985px) {
+	.sidebar-left-heading h3 {
+		text-align: center;
+	}
+	#latest_news{
+		margin-top : 15px;
+	}
+}
+
+
+#latest_news {
+	width : 20%;
+	height : 50%;
+	margin-bottom : 10px;
+	background: url('../img/icons/latest_news.svg') no-repeat;
+	background-position: 60%;
+}
+
+
+/* Main content area */
+.slider{
+	margin-top : 3%;
+}
+
+/* slider */
+.bxslider li{
+	left: 0px;
+}
+
+
+/* front page promoted posts */
+
+.front-page-posts{
+	
+}
+
+.post-teasere {
+	margin-left: 3px;
+	font-family: Segoe UI;
+
+}
+
+.post-teasere h2{
+	font-family: Segoe UI;
+	font-size: 1.5em;
+	margin : 0;
+	padding : 0;
+}
+
+.post-teasere span, .icon {
+	font-size : .8em;
+}
+
+.post-entry{
+	margin-right : .5px;
+	margin-left: .5px;
+	background-color : #ffffff;
+	margin-top : 10px;
+	box-shadow : 0px 0px 4px 0px #888888;
+	-webkit-box-shadow : 0px 0px 4px 0px #888888;
+	padding : 4px 0px 2px 0px;
+}
+
+.date {
+	font-size  : .8em;
+	font-style: italic;
+	color : #43ac6a;
+}
+.latest-detail {
+	font-size : .89em;
+}
+.latest-contents{
+	margin-top: 20px;
+}
+.submit-info{
+	color : #557AA0;
+}
+
+
+.views-row-odd {
+	background-color: #F2F2F2;
+}
+
+.latest {
+	padding : 10px;
+}
+.page-post{
+	margin-top: 20px;
+	width: 97%;
+}
+
+.post-entry .btn{
+	margin-left : 12px;
+}
+
+/** front page promoted posts.*/
+
+
+/* FAQL Sections */
+
+.job-highlight-intro{
+	margin-top : 80px;
+	padding : 30px;
+}
+
+.job-highlight-intro .entry .image img{
+	
+}
+
+.job-highlight{
+	margin-right : 5px;
+	margin-top : 20px;		
+	background : white;
+}
+
+.job-highlight .heading{
+	float : left;
+	width : 100%;
+	height : 100px;
+	background-color : #1C548C;
+}
+
+.job-highlight .heading p{
+	margin-top : 3%;
+	color : #ffffff;
+	font-size : 25px;
+	font-weight : 700;
+}
+
+
+
+#job_highlight_svg{
+	float : left;
+	width : 100px;
+	height : 100px;
+	background : url("../img/icons/job_highlight.svg") no-repeat;
+	background-position : 13px 10px;
+}
+
+
+.accordion .title{
+	font-size : 18px;
+	font-family: Segoe UI;
+	font-weight: 700;
+	color : #1C548C;
+}
+
+.accordion .content{
+	font-size : 14px;
+}
+
+.ui.accordion, .ui.accordion .accordion {
+	width : 100%;
+}
+
+footer{
+	margin-top : 10%;
+	min-height: 300px;
+	background-color : #F2F2F2;
+	padding :0;
+}
+
+footer .contact-person h3{
+	font-weight: 400;
+	border-bottom : 2px dotted blue;
+	padding : 5px;
+}
+
+footer .contact-person{
+	font-size : 20px;
+	margin-left : 30px;
+	padding : 5px;
+}
+
+.footer-block {
+	margin : 10px ;
+	background-color: white;
+	padding : 10px;
+	padding-left: 30px;
+}
+
+.login-form-block {
+	background-color: white;
+	margin-left : 2px;
+	margin-right: 2px;
+}
+
+
+.social-icons{
+	padding-left: 15px;
+	padding-top : 10px;
+	padding-bottom: 10px;
+	margin : auto;
+	text-align: center;
+	width: 100%;
+}
+
+
+.debug {
+	border: 2px dashed green;
+}
+
+.social-icons img{
+	width: 20%;
+}
+
+
+
+/*navigation */
+
+@media (min-width: 770px) and (max-width: 1000px) {
+	.navbar-nav li{
+		
+	}
+
+	.navbar-nav li a{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+
+.sidebar-left-heading h3 {
+      margin-top: 20px;
+    }
+
+    #latest_news {
+      margin-left: 5px;
+      margin-top: -10px;
+    }
+
+    p, h2,a,h3,h1,h4,h5, .sidebar-left-heading h3, .title {
+      font-family: "Open Sans";
+    }
+    .post-teasere  {
+        padding-bottom: 10px;
+    }
+    .post-teasere h2, .post-teasere p {
+        color : #1C548C;
+        margin-top: 13px;
+        font-family: "Open Sans";
+    }
+    .post-teasere p {
+        font-size: 13px;
+    }
+
+    .link{
+        margin: 0;
+        color : white;
+        border-radius: 3px;
+        background : #1C548C;
+        padding : 3px 10px 3px 10px;
+        transition : all .2s ease;
+        text-decoration: none;
+        
+    }
+
+    .link:hover {
+      background : #033F60;
+      color : white;
+      padding : 3px 20px 3px 20px;
+    }

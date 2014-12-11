@@ -42,7 +42,7 @@
       .slide-show-container {
         width: 100%;
         height: 44em;
-        background-color: #33ccaa;
+        background-color: transparent;
         position: relative;
       }
       .slides .slide img {
@@ -216,6 +216,16 @@
       .right-navigation .social-icons span.icon.active {
         background-position: 0px -39px;
       }
+
+      #slide2 > .slide-content > a {
+        background-color: transparent;
+        color: white;
+      }
+      #slide2 > .slide-content > a:hover {
+        background-color: #21AB9B;
+        border: 2px solid #21AB9B;
+        color: white;
+      }
       
     </style>
   </head>
@@ -253,28 +263,44 @@
     </div>
     <div class="slide-show-container">
       <div class="slides">
+        
         <div class="slide">
-          <img src="{{URL::to('/assets/images/slides/1.png');}}" alt="">
+          <img class="animated fadeInUp" src="{{URL::to('/assets/images/slides/1.png');}}" alt="">
           <div class="slide-content">
-              <h2 class="animated fadeInRight">Get your employer's attention<br/>Get the most hot job.</h2>
-              <br><br>
-              <a class="animated fadeInRight" href="">APPLY NOW <span class="ti-arrow-right"></span></a>
+            <h2 class="animated fadeInRight">We have great offer going on in our campus. <br/> So what are you waiting for.</h2>
+            <br><br>
+            <a class="animated fadeInUp" href="">APPLY NOW <span class="ti-arrow-right"></span></a>
           </div>
         </div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+
+        <div class="slide hidden" id="slide2">
+          <img class="animated fadeInRight" src="{{URL::to('/assets/images/slides/2.png');}}" alt="">
+          <div class="slide-content">
+            <h2 class="animated fadeInRight">Interviews has changed the way it used be.</h2>
+            <p style="font-size : 1.9rem" class="animated fadeInRight">People are no longer dumbass like they used to be. So to compete with them skills are are essentials.</p>
+            <br><br>
+            <a class="animated flipInX" href="">INTERVIEW Skills <span class="ti-arrow-right"></span></a>
+          </div>
+        </div>
+        
+        <div class="slide hidden">
+          <img class="animated fadeInLeft" src="{{URL::to('/assets/images/slides/3.png');}}" alt="">
+          <div class="slide-content">
+              <h2 class="animated fadeInDown">Know your shit. <br/> ROCK THE WORLD.</h2>
+              <br><br>
+              <a class="animated flipInY" href="">ROCK NOW <span class="ti-arrow-right"></span></a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
 
-
-
-
     <div class="container">
       <div class="topheader">
         <div class="row">
-          <div class="col-sm-4 ">
+          <div class="col-sm-4">
             <img 
               id="cso_logo" 
               src="http://localhost/projects/cso-drupal/sites/all/themes/themeversity/img/csoicon.png" 
@@ -553,6 +579,24 @@
         },function(){
           $(this).removeClass('active');
         });
+
+
+
+        (function(){
+          var s = $('.slide');
+          var current = 0;
+          var next = current + 1;
+          setInterval(function(){
+            $(s[current]).addClass('hidden');
+            $(s[next]).removeClass('hidden').addClass('fadeIn');
+            current = next;
+            next++;
+            if(next == s.length) next = 0;
+          }, 5000);
+
+          
+
+        })();
 
       });
     </script>

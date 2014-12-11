@@ -226,6 +226,10 @@
         border: 2px solid #21AB9B;
         color: white;
       }
+
+      .modal-dialog {
+        z-index: 99999999999;
+      }
       
     </style>
   </head>
@@ -236,7 +240,7 @@
       <div class="signup-extension hidden animated fadeInDown">
         <div class="arrow-up"></div>
           <div class="items">
-            <div class="item" data-text="Enlighten yourself with jobs">
+            <div data-toggle="modal" data-target="#myModal" class="item" data-text="Enlighten yourself with jobs">
               <img src="assets/images/student.png" alt="" width="25px" height="25px">
               <p>students</p>
             </div>
@@ -295,6 +299,8 @@
       </div>
     </div>
   </div>
+
+
 
 
     <div class="container">
@@ -525,6 +531,79 @@
     </footer>
 
 
+
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Register as a student</h4>
+      </div>
+      <div class="modal-body">
+
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <form id="wizardform" method="get" action="">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <ul class="nav nav-tabs font-bold">
+                          <li><a href="#step1" data-toggle="tab">Step 1</a></li>
+                          <li><a href="#step2" data-toggle="tab">Step 2</a></li>
+                          <li><a href="#step3" data-toggle="tab">Step 3</a></li>
+                        </ul>
+                      </div>
+                      <div class="panel-body">
+                        <p>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</p>
+                        <div class="line line-lg"></div>
+                        <h4>Validate Form</h4>
+                        <div class="progress progress-xs m-t-md">
+                          <div class="progress-bar bg-success"></div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="tab-pane" id="step1">                            
+                            <p>Your website:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="url" placeholder="website">
+                            <p class="m-t">Your email:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                          </div>
+                          <div class="tab-pane" id="step2">
+                            <p>Your email:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                          </div>
+                          <div class="tab-pane" id="step3">This is step 3</div>
+                          <ul class="pager wizard m-b-sm">
+                            <li class="previous first" style="display:none;"><a href="#">First</a></li>
+                            <li class="previous"><a href="#">Previous</a></li>
+                            <li class="next last" style="display:none;"><a href="#">Last</a></li>
+                            <li class="next"><a href="#">Next</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div> 
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -600,6 +679,18 @@
 
       });
     </script>
+  <script type="text/javascript">
+    $('#myModal').on('show.bs.modal', function (event) {
+        
+    });
+
+  </script>
+
+  <script src="assets/js/app.js"></script>  
+  <script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="assets/js/wizard/jquery.bootstrap.wizard.js"></script>
+  <script src="assets/js/wizard/demo.js"></script>
+
 
   </body>
 </html>

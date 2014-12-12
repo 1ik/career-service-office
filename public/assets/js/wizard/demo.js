@@ -2,8 +2,6 @@
 
   $(function(){
 
-    
-
     $('#wizardform').bootstrapWizard({
       'tabClass': 'nav nav-tabs',
       'onNext': function(tab, navigation, index) {
@@ -11,10 +9,7 @@
         $('[data-required="true"]', $( $(tab.html()).attr('href') )).each(function(){
           return (valid = $(this).parsley( 'validate' ));
         });
-        //return valid;
-        return true;
-      },
-      'onPrevious': function(tab, navigation, index) {
+        return valid;
       },
       onTabClick: function(tab, navigation, index) {
         return false;

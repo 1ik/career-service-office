@@ -109,6 +109,13 @@
         margin: 20px;
       }
 
+      .modal-backdrop, .modal {
+        position: fixed;
+        z-index: 99999999;
+      }
+
+      
+
       .signup-extension .arrow-up {
         width: 0; 
         height: 0; 
@@ -123,8 +130,6 @@
         top : -7px;
         position: absolute;
       }
-
-      
       
 
       .signup-extension .foot {
@@ -230,7 +235,6 @@
       .modal-dialog {
         z-index: 99999999999;
       }
-      
     </style>
   </head>
   <body>
@@ -549,30 +553,246 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <ul class="nav nav-tabs font-bold">
-                          <li><a href="#step1" data-toggle="tab">Step 1</a></li>
-                          <li><a href="#step2" data-toggle="tab">Step 2</a></li>
-                          <li><a href="#step3" data-toggle="tab">Step 3</a></li>
+                          <li><a href="#step1" data-toggle="tab">Basic </a></li>
+                          <li><a href="#step2" data-toggle="tab">Academic </a></li>
+                          <li><a href="#step3" data-toggle="tab">Personal</a></li>
+                          <li><a href="#step4" data-toggle="tab">Gurdian </a></li>
+                          <li><a href="#step5" data-toggle="tab">Finish </a></li>
                         </ul>
                       </div>
                       <div class="panel-body">
-                        <p>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</p>
-                        <div class="line line-lg"></div>
-                        <h4>Validate Form</h4>
-                        <div class="progress progress-xs m-t-md">
-                          <div class="progress-bar bg-success"></div>
-                        </div>
+                        
                         <div class="tab-content">
-                          <div class="tab-pane" id="step1">                            
-                            <p>Your website:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="url" placeholder="website">
-                            <p class="m-t">Your email:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+
+                          <!--basic informations -->
+                          <div class="tab-pane" id="step1">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <label for="">Your Name : </label>
+                              </div>
+                              <div class="col-xs-6">
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="First Name" id="first_name">
+                              </div>
+                              <div class="col-xs-6">
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Last Name" id="last_name">
+                              </div>
+
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="gender">Gender </label>
+                                  <select style="width:260px" name="gender" id="gender" class="form-control">
+                                    <option value="m">Male</option>
+                                    <option value="f">Female</option>
+                                    <option selected value="o">Other</option>
+                                  </select>
+                                </div>
+                              </div>
+                              
+                              <div class="col-xs-12">
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <label for="">Contact Information</label>
+                                    <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Email address" id="email" data-type="email">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 form-group">
+                                      <br>
+                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Cell Phone" id="cell_phone" data-type="number">
+                                    </div>
+                                    <div class="col-xs-6 form-group">
+                                    <br>
+                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Telephone" id="telephone" data-type="number">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            
                           </div>
+
+
+
+
+                          <!--basic informations -->
                           <div class="tab-pane" id="step2">
-                            <p>Your email:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <p>Your current Student ID:</p>
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="Student ID">
+                              </div>
+                              <div class="col-xs-6">
+                                <br>
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="current cgpa" name="current_cgpa">
+                              </div>
+                              <div class="col-xs-6">
+                                <br>
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="credits completed" name="credits_completed">
+                              </div>
+
+                                <div class="col-xs-12 form-group">
+                                  <label for="department">Department : </label>
+                                  <select class="form-control" name="department">
+                                    <option value="5">Architecture</option>
+                                    <option value="4">BRAC Business School</option>
+                                    <option value="7">Economics and Social Sciences</option>
+                                    <option value="6">English</option>
+                                    <option value="2">Mathematics and natural science (MNS)</option>
+                                    <option value="3">School of Computer Science and Electronic Engineering</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-xs-6 form-group">
+                                  <label for="major">Major : </label>
+                                  <select class="form-control" name="major">
+                                    <option value="17">Artificial Intelligence</option>
+                                    <option value="15">Circuits</option>
+                                    <option value="12">Computer Science</option>
+                                    <option value="10">Finance</option>
+                                    <option value="11">Human Resource</option>
+                                    <option value="16">Image processing</option>
+                                    <option value="9">Management</option>
+                                    <option value="8">Marketing</option>
+                                    <option value="13">Power</option>
+                                    <option value="14">Telecommunication</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-xs-6 form-group">
+                                  <label for="minor">Minor : </label>
+                                  <select class="form-control" name="minor">
+                                    <option value="17">Artificial Intelligence</option>
+                                    <option value="15">Circuits</option>
+                                    <option value="12">Computer Science</option>
+                                    <option value="10">Finance</option>
+                                    <option value="11">Human Resource</option>
+                                    <option value="16">Image processing</option>
+                                    <option value="9">Management</option>
+                                    <option value="8">Marketing</option>
+                                    <option value="13">Power</option>
+                                    <option value="14">Telecommunication</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-xs-12 form-group">
+                                  <label for="semester">Semester : </label>
+                                  <select class="form-control" name="minor">
+                                    <option value="17">Second Last</option>
+                                    <option value="15">Last</option>
+                                  </select>
+                                </div>
+                            </div>
                           </div>
-                          <div class="tab-pane" id="step3">This is step 3</div>
+                          
+                          
+
+                          <!-- personal information -->
+                          <div class="tab-pane" id="step3">
+                            <section class="panel panel-default">
+                              <header class="panel-heading">
+                                <span class="h4">Your Present address</span>
+                              </header>
+                              <div class="panel-body">
+                                  <div class="form-group">
+                                    <textarea name="present_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
+                                  </div>
+                                  <div class="form-group pull-in clearfix">
+                                    <div class="col-sm-6">
+                                      <input type="text" class="form-control" placeholder="City" data-required="true" name="present_city">
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input type="email" class="form-control" placeholder="Postal Code" data-required="true" name="present_postal_code">
+                                    </div>
+                                  </div>
+                              </div>
+                            </section>
+
+                            <section class="panel panel-default">
+                              <header class="panel-heading">
+                                <span class="h4">Your Permanent address</span>
+                              </header>
+                              <div class="panel-body">
+                                  <div class="form-group">
+                                    <textarea name="permanent_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
+                                  </div>
+                                  <div class="form-group pull-in clearfix">
+                                    <div class="col-sm-6">
+                                      <input class="form-control" placeholder="City" data-required="true" name="permanent_city">
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input class="form-control" placeholder="Postal Code" data-required="true" name="permanent_postal_code">
+                                    </div>
+                                    <br>
+                                  </div>
+                              </div>
+                            </section>
+                            <div class="col-sm-12">
+                              <input class="form-control" placeholder="Web Url" data-required="true" name="student_web_url">
+                            </div>
+                            <br><br>
+                          </div>
+
+
+
+
+                          <!-- personal information -->
+                          <div class="tab-pane" id="step4">
+                            
+                            <div class="form-group pull-in clearfix">
+                              <div class="col-sm-12">
+                                <label>Gurdian name</label>
+                                <input type="text" class="form-control" data-required="true" name="gurdian_name">
+                              </div>
+                              <div class="col-sm-12">
+                                <label>Relationship with Gurdian</label>
+                                <input  class="form-control" data-required="true">
+                              </div>
+                              <div class="col-sm-12">
+                                <label>Name of the Institute Gurdian works in</label>
+                                <input class="form-control" data-required="true" name="gurdian_work_institute">
+                              </div>
+                              <div class="col-sm-12">
+                                <label>Designation of Gurdian in the institute</label>
+                                <input class="form-control" data-required="true" name="gurdian_desig">
+                              </div>
+                              <div class="col-sm-12">
+                                <label>Gurdian's Contact number. </label>
+                                <input class="form-control" data-required="true" name="gurdian_contact">
+                              </div>
+                              <div class="col-sm-12">
+                                <label>Gurdian's Email address </label>
+                                <input class="form-control" name="gurdian_email">
+                              </div>
+                            </div>
+                          </div>
+                          <!--personal information-->
+
+                          
+                          <!--finish -->
+                            <div class="tab-pane" id="step5">
+                            <div class="form-group pull-in clearfix">
+                              
+                              <div class="col-sm-12">
+                                <label>Tell something about yourself</label>
+                                <textarea name="student_bio" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <label>Your Employment status ? </label>
+                                <select style="width:260px" name="gender" id="gender" class="form-control">
+                                    <option value="m">Employed</option>
+                                    <option value="f">Unemployed</option>
+                                  </select>
+                              </div>
+                              <div class="col-sm-12">
+                              <br>
+                                <a href="#" class="btn btn-s-md btn-success btn-rounded">Submit</a>
+                              </div>
+                            </div>
+                          </div>
+                          <!--finish -->
+
+
+
                           <ul class="pager wizard m-b-sm">
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
                             <li class="previous"><a href="#">Previous</a></li>
@@ -580,18 +800,17 @@
                             <li class="next"><a href="#">Next</a></li>
                           </ul>
                         </div>
+
+                        <h4>Completed</h4>
+                        <div class="progress progress-xs m-t-md">
+                          <div class="progress-bar bg-success"></div>
+                        </div>
+
                       </div>
                     </div>
                   </form>
                 </div>
               </div> 
-
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -688,9 +907,12 @@
 
   <script src="assets/js/app.js"></script>  
   <script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="assets/js/parsley/parsley.min.js"></script>
   <script src="assets/js/wizard/jquery.bootstrap.wizard.js"></script>
   <script src="assets/js/wizard/demo.js"></script>
+  <script src="assets/js/app.plugin.js"></script>
 
 
+</script>
   </body>
 </html>

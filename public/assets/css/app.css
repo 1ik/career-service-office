@@ -1416,6 +1416,11 @@ fieldset[disabled] .btn-warning.active {
   background-color: #fcc633;
   border-color: #fcc633;
 }
+.important {
+  font-weight: 700;
+  font-size: 38px;
+}
+
 .btn-danger {
   color: #fff !important;
   background-color: #e33244;

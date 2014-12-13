@@ -96,7 +96,7 @@
         z-index: 99999;
       }
 
-      .left-navigation a {
+      .left-navigation a, .footer-head {
         color: white;
         font-weight: 700;
       }
@@ -245,7 +245,8 @@
 
       .featured-header {
         height: 10em;
-        background-color: #F9F9F9;
+        background-color: #ffffff;
+        padding-bottom: 10px;
       }
 
       .featured-header a.title-link  {
@@ -361,6 +362,59 @@
         margin-top: 10px;
       } 
       
+    
+      .footer {
+        margin-top: 100px;
+      }
+      
+      .footer-head {
+        background-color: #1D4355;
+        text-align: center;
+        padding:25px;
+
+      }
+
+      .footer-body-wrapper {
+        background-color: #163546;
+        min-height: 300px;
+        padding-top: 30px;
+      }
+
+      .footer-body-wrapper .footer-body {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left:50px;
+        padding-right:50px;
+        background-color: white;
+        color: white;
+      }
+      .footer-body h3 {
+        font-weight: 700;
+      }
+
+      .footer-body ul li p a {
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+      }
+
+      .footer-body ul {
+        list-style-type: none;
+        padding-left: 0px;
+      }
+
+      .footer .social-feed {
+        height: 240px;
+        overflow-y : scroll;
+        background-color: transparent;
+        border:none;
+      }
+
+      .panel-default {
+        background-color: none;
+      }
+
+
 
     </style>
   </head>
@@ -370,8 +424,8 @@
       <a href="" id="signup-link">Sign up</a> | <a id="login-link" href="">Log in</a>
       <div class="signup-extension hidden animated fadeInDown">
         <div class="arrow-up"></div>
-          <div class="items" data-toggle="modal" data-target="#myModal">
-            <div class="item" data-text="Enlighten yourself with jobs">
+          <div class="items">
+            <div class="item" data-text="Enlighten yourself with jobs" data-toggle="modal" data-target="#myModal">
               <img src="assets/images/student.png" alt="" width="25px" height="25px">
               <p>students</p>
             </div>
@@ -435,7 +489,7 @@
           <div class="col-md-3">
             <img 
               id="cso_logo" 
-              src="http://192.168.0.100/projects/cso-drupal/sites/all/themes/themeversity/img/csoicon.png" 
+              src="assets/images/csoicon.png" 
               width="200px" 
               height: ="120px" />
 
@@ -662,8 +716,120 @@ structuring a cover letter; require a better understanding of the ‘market’, 
     </div>
 
 
+    <div class="row footer">
+      <div class="row footer-head">
+          <p>SUBSCRIBE US TO GET REGULAR UPDATES</p>
+          <form class="form-inline" role="form">
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+              </div>
+              <a href="#modal-form" class="btn btn-success" data-toggle="modal">Subscribe!</a>
+          </form>
+      </div>
+
+
+      <div class="row footer-body-wrapper">
+          <div class="footer-body">
+
+            <div class="col-md-5" >
+              <h3>Recent Posts</h3>
+              <div class="post-links">
+                <ul>
+                  <li>
+                    <p><i class="ti-angle-double-right"></i> 
+                    <a href="">
+                      The Career Services Office (CSO), BRAC University Launches a Partnership with Voluntary Service Overseas (VSO) Bangladesh
+                    </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                    <i class="ti-angle-double-right"></i> 
+                    <a href="">Career Serfvice office becomes dedicated job 
+                    partner with BDJobs.</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="ti-angle-double-right"></i>
+                      <a href="">Career Fare in Westin</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="ti-angle-double-right"></i>
+                      <a href="">Loren ipsum dolor sit amet</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+
+            <div class="col-md-4 ">
+              <h3>EVENTS</h3>
+              <div class="post-links">
+                <ul>
+                  <li>
+                    <p>
+                      <a href="">
+                        <i class="ti-angle-double-right"></i> Fall 2015 PSDP Registrations
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="">
+                        <i class="ti-angle-double-right"></i>
+                        Internship Registrations for 2015 Fall Open
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href="">
+                        <i class="ti-angle-double-right"></i> PSDP Registration 2014
+                      </a>  
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a href=""><i class="ti-angle-double-right"></i> Spring 2014 Registrations</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <h3>HOTLINE </h3>
+              <p>
+                  We are always eger to listen from you. Please feel free to contact for any purpose in the following address.
+              </p>
+              <p style="font-size : 14px">
+                  <i class="fa fa-mobile" style="font-size:14px"></i> +880 1932 986 985
+              </p>
+              <p style="font-size : 14px">
+                  <i class="fa fa-phone" style="font-size:14px"></i> +880 0292121233
+              </p>
+              <p style="font-size : 14px">
+                  <i class="fa fa-envelope-o" style="font-size:14px"></i> hello[.]cso.bracu.ac.bd
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+
   </div>
   <!--container--ful-width-->
+
+
+
+
+
+
+
+
 
 
 
@@ -688,10 +854,10 @@ structuring a cover letter; require a better understanding of the ‘market’, 
       </div>
       <div class="modal-body">
 
-
               <div class="row">
                 <div class="col-sm-12">
                   <form id="wizardform" method="get" action="">
+                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <ul class="nav nav-tabs font-bold">
@@ -713,16 +879,16 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                                 <label for="">Your Name : </label>
                               </div>
                               <div class="col-xs-6">
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="First Name" id="first_name">
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="First Name" id="student_first_name">
                               </div>
                               <div class="col-xs-6">
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Last Name" id="last_name">
+                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Last Name" id="student_last_name">
                               </div>
 
                               <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="gender">Gender </label>
-                                  <select style="width:260px" name="gender" id="gender" class="form-control">
+                                  <select style="width:260px" name="student_gender" id="student_gender" class="form-control">
                                     <option value="m">Male</option>
                                     <option value="f">Female</option>
                                     <option selected value="o">Other</option>
@@ -734,23 +900,40 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                                 <div class="row">
                                   <div class="col-xs-12">
                                     <label for="">Contact Information</label>
-                                    <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Email address" id="email" data-type="email">
+                                    <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Email address" id="student_email" data-type="email">
                                   </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6 form-group">
                                       <br>
-                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Cell Phone" id="cell_phone" data-type="number">
+                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Cell Phone" id="student_cell_phone" data-type="number">
                                     </div>
                                     <div class="col-xs-6 form-group">
                                     <br>
-                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Telephone" id="telephone" data-type="number">
+                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Telephone" id="student_telephone" data-type="number">
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6 form-group">
+                                      <br>
+                                      <input type="password" class="form-control" data-trigger="change" data-required="true" placeholder="Password" id="student_password" >
+                                    </div>
+                                    <div class="col-xs-6 form-group">
+                                    <br>
+                                      <input type="password" class="form-control" data-trigger="change" data-required="true" placeholder="Confirm" id="student_password_confirm" data-equalto="#student_password" >
+                                    </div>
+                                </div>
+
+
                               </div>
                             </div>
                             
                           </div>
+
+
+
+
 
 
 
@@ -760,20 +943,20 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                             <div class="row">
                               <div class="col-xs-12">
                                 <p>Your current Student ID:</p>
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="Student ID">
+                                <input id="student_studentid" type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="Student ID">
                               </div>
                               <div class="col-xs-6">
                                 <br>
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="current cgpa" name="current_cgpa">
+                                <input id="student_cgpa" type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="current cgpa" name="current_cgpa">
                               </div>
                               <div class="col-xs-6">
                                 <br>
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="credits completed" name="credits_completed">
+                                <input id="student_credits_completed" type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="credits completed" name="credits_completed">
                               </div>
 
                                 <div class="col-xs-12 form-group">
                                   <label for="department">Department : </label>
-                                  <select class="form-control" name="department">
+                                  <select class="form-control" name="department" id="student_department">
                                     <option value="5">Architecture</option>
                                     <option value="4">BRAC Business School</option>
                                     <option value="7">Economics and Social Sciences</option>
@@ -785,7 +968,7 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
                                 <div class="col-xs-6 form-group">
                                   <label for="major">Major : </label>
-                                  <select class="form-control" name="major">
+                                  <select class="form-control" name="major" id="student_major">
                                     <option value="17">Artificial Intelligence</option>
                                     <option value="15">Circuits</option>
                                     <option value="12">Computer Science</option>
@@ -801,7 +984,7 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
                                 <div class="col-xs-6 form-group">
                                   <label for="minor">Minor : </label>
-                                  <select class="form-control" name="minor">
+                                  <select class="form-control" name="minor" id="student_minor">
                                     <option value="17">Artificial Intelligence</option>
                                     <option value="15">Circuits</option>
                                     <option value="12">Computer Science</option>
@@ -817,7 +1000,7 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
                                 <div class="col-xs-12 form-group">
                                   <label for="semester">Semester : </label>
-                                  <select class="form-control" name="minor">
+                                  <select class="form-control" name="minor" id="student_semester">
                                     <option value="17">Second Last</option>
                                     <option value="15">Last</option>
                                   </select>
@@ -825,7 +1008,11 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                             </div>
                           </div>
                           
-                          
+                        
+
+
+
+
 
                           <!-- personal information -->
                           <div class="tab-pane" id="step3">
@@ -835,14 +1022,14 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                               </header>
                               <div class="panel-body">
                                   <div class="form-group">
-                                    <textarea name="present_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
+                                    <textarea id="student_present_address" name="present_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
                                   </div>
                                   <div class="form-group pull-in clearfix">
                                     <div class="col-sm-6">
-                                      <input type="text" class="form-control" placeholder="City" data-required="true" name="present_city">
+                                      <input type="text" class="form-control" placeholder="City" data-required="true" name="present_city" id="student_present_city">
                                     </div>
                                     <div class="col-sm-6">
-                                      <input type="email" class="form-control" placeholder="Postal Code" data-required="true" name="present_postal_code">
+                                      <input type="text" class="form-control" placeholder="Postal Code" data-required="true" name="present_postal_code" id="student_postal_code">
                                     </div>
                                   </div>
                               </div>
@@ -854,21 +1041,21 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                               </header>
                               <div class="panel-body">
                                   <div class="form-group">
-                                    <textarea name="permanent_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
+                                    <textarea id="student_permanent_address" name="permanent_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
                                   </div>
                                   <div class="form-group pull-in clearfix">
                                     <div class="col-sm-6">
-                                      <input class="form-control" placeholder="City" data-required="true" name="permanent_city">
+                                      <input id="student_permanent_city" class="form-control" placeholder="City" data-required="true" name="permanent_city">
                                     </div>
                                     <div class="col-sm-6">
-                                      <input class="form-control" placeholder="Postal Code" data-required="true" name="permanent_postal_code">
+                                      <input class="form-control" placeholder="Postal Code" data-required="true" name="permanent_postal_code" id="student_permanent_postal_code">
                                     </div>
                                     <br>
                                   </div>
                               </div>
                             </section>
                             <div class="col-sm-12">
-                              <input class="form-control" placeholder="Web Url" data-required="true" name="student_web_url">
+                              <input type="url" class="form-control" placeholder="Web Url" data-required="true" name="student_web_url" id="student_web_url">
                             </div>
                             <br><br>
                           </div>
@@ -882,27 +1069,27 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                             <div class="form-group pull-in clearfix">
                               <div class="col-sm-12">
                                 <label>Gurdian name</label>
-                                <input type="text" class="form-control" data-required="true" name="gurdian_name">
+                                <input type="text" class="form-control" data-required="true" name="gurdian_name" id="student_gurdian_name">
                               </div>
                               <div class="col-sm-12">
                                 <label>Relationship with Gurdian</label>
-                                <input  class="form-control" data-required="true">
+                                <input  class="form-control" data-required="true" id="student_gurdian_relation">
                               </div>
                               <div class="col-sm-12">
                                 <label>Name of the Institute Gurdian works in</label>
-                                <input class="form-control" data-required="true" name="gurdian_work_institute">
+                                <input class="form-control" data-required="true" name="gurdian_work_institute" id="student_gurdian_work_institute">
                               </div>
                               <div class="col-sm-12">
                                 <label>Designation of Gurdian in the institute</label>
-                                <input class="form-control" data-required="true" name="gurdian_desig">
+                                <input class="form-control" data-required="true" name="gurdian_desig" id="student_gurdian_design">
                               </div>
                               <div class="col-sm-12">
                                 <label>Gurdian's Contact number. </label>
-                                <input class="form-control" data-required="true" name="gurdian_contact">
+                                <input class="form-control" data-required="true" name="gurdian_contact" id="student_gurdian_contact">
                               </div>
                               <div class="col-sm-12">
                                 <label>Gurdian's Email address </label>
-                                <input class="form-control" name="gurdian_email">
+                                <input class="form-control" name="gurdian_email" id="student_gurdian_email">
                               </div>
                             </div>
                           </div>
@@ -915,25 +1102,23 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                               
                               <div class="col-sm-12">
                                 <label>Tell something about yourself</label>
-                                <textarea name="student_bio" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
+                                <textarea id="student_bio" name="student_bio" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
                               </div>
 
                               <div class="col-sm-12">
                                 <label>Your Employment status ? </label>
-                                <select style="width:260px" name="gender" id="gender" class="form-control">
-                                    <option value="m">Employed</option>
-                                    <option value="f">Unemployed</option>
+                                <select style="width:260px" name="gender" id="student_employment_status" class="form-control">
+                                    <option value="employed">Employed</option>
+                                    <option value="unemployed">Unemployed</option>
                                   </select>
                               </div>
                               <div class="col-sm-12">
                               <br>
-                                <a href="#" class="btn btn-s-md btn-success btn-rounded">Submit</a>
+                                <a id="student-form-submit-button" href="#" class="btn btn-s-md btn-default btn-rounded">Submit</a>
                               </div>
                             </div>
                           </div>
                           <!--finish -->
-
-
 
                           <ul class="pager wizard m-b-sm">
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
@@ -1058,8 +1243,75 @@ structuring a cover letter; require a better understanding of the ‘market’, 
       });
     </script>
   <script type="text/javascript">
-    $('#myModal').on('show.bs.modal', function (event) {
-        
+    
+    $('#myModal').on('hidden.bs.modal', function (event) {
+      $('input').val('');
+    });
+
+
+    $('#myModal').on('shown.bs.modal', function (event) {
+
+        $('#wizardform').bootstrapWizard('show',0);
+
+        /**
+        * handle form submit for student.
+        */
+        $('#student-form-submit-button').on('click',function(e) {
+
+            if($(this).hasClass('btn-success') || $(this).hasClass('btn-disabled')) {
+              return;
+            }
+
+            var student = {};
+            student.token = $('_token').val();
+
+            student.first_name = $('#student_first_name').val();
+            student.last_name = $('#student_last_name').val();
+            student.gender = $('#student_gender option:selected').text();
+            student.email = $('#student_email').val();
+            student.cell_phone = $('#student_cell_phone').val();
+            student.phone_number = $('#student_telephone').val();
+
+            student.student_id = $('#student_studentid').val();
+            student.current_cgpa = $('#student_cgpa').val();
+            student.credits_completed = $('#student_credits_completed').val();
+            student.department = $('#student_department option:selected').val();
+            student.major = $('#student_major option:selected').val();
+            student.minor = $('#student_major option:selected').val();
+            student.semester = $('#student_semester option:selected').val();
+
+
+            student.present_address = $('#student_present_address').val();
+            student.present_city = $('#student_present_city').val();
+            student.present_postal_code = $('#student_postal_code').val();
+            student.permanent_address = $('#student_permanent_address').val();
+            student.permanent_city = $('#student_permanent_city').val();
+            student.permanent_postal_code = $('#student_permanent_postal_code').val();
+            student.web_url = $('#student_web_url').val();
+
+            student.gurdian_name = $('#student_gurdian_name').val();
+            student.gurdian_relation = $('#student_gurdian_relation').val();
+            student.gurdian_work_institute = $('#student_gurdian_work_institute').val();
+            student.gurdian_designation = $('#student_gurdian_design').val();
+            student.gurdian_contact = $('#student_gurdian_contact').val();
+            student.gurdian_email = $('#student_gurdian_email').val();
+
+            student.password = $('#student_password').val();
+
+            student.bio = $('#student_bio').val();
+            student.employment_status = $('#student_employment_status option:selected').val();
+
+
+            $(this).html('Submitting...');
+            var that = $(this);
+            $(this).addClass('disabled');
+            $.post('/student-register',student, function(response){
+              console.log(response);
+              that.removeClass('disabled').removeClass('btn-default').addClass('fa fa-check btn-success').html('Success');
+            });
+
+
+        });
     });
 
   </script>
@@ -1077,11 +1329,16 @@ structuring a cover letter; require a better understanding of the ‘market’, 
   </script>
 
   <script type="text/javascript">
+      
       $(document).ready(function() {
+        
         $("#owl-demo").owlCarousel({
           navigation:true,
           responsive: true
         });
+
+
+
       });
   </script>
 

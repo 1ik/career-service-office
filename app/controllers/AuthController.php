@@ -2,43 +2,92 @@
 
 class AuthController extends Controller {
 
+    public function __construct(\cso\students\StudentRepository $students) {
+        $this->students = $students;
+
+    }
 
 
-	private function registerUser($applicant) {
 
-		try {
+    public function postLogin() {
+        $error = '';
+        try
+        {
+            $credentials = Input::except("_token");
+            $user = Sentry::authenticate($credentials, false);
+            $student = Student::whereUserId($user->id)->get();
+            $name = $user->first_name . " " . $user->last_name;
+            $name = implode(explode(" ", $name), "-");
+            if($student != null) {
+                return Redirect::to('profile/students/' . $user->id . '/' . $name );
+            }
+            //var_dump($student);
+            //die();
+            App::abort(404);
+        }
+        catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
+        {
+            $error =  'Login field is required.';
+        }
+        catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
+        {
+            $error =  'Password field is required.';
+        }
+        catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
+        {
+            $error =  'Wrong password, try again.';
+        }
+        catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
+        {
+            $error =  'User was not found.';
+        }
+        catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
+        {
+            $error =  'User is not activated.';
+        }
 
-    		$user = Sentry::register([
-        		'email'    => $applicant['email'],
-        		'password' => $applicant['password']
-    		]);
+        return Redirect::back()->withErrors($error);
 
-    		$user->first_name = $applicant['first_name'];
-    		$user->last_name = $applicant['last_name'];
-    		$user->phone_number = $applicant['phone_number'];
-    		$user->cell_phone = $applicant['cell_phone'];
-    		$user->gender = $applicant['gender'];
-    		$user->update();
-    		
-    		//Let's get the activation code
-    		$activationCode = $user->getActivationCode();
-    		//Send activation code to the user so he can activate the account
-    		Mail::send('emails.registration', ['user' => $user, 'activationCode' => $activationCode ], function ($message) use ($user) {
-		        $message->subject('Email Confirmation');
-		        $message->from('echoanik@gmail.com', 'Career Services Office');
-		        $message->to($user->email); // Recipient address
-		    });
-    		return ['status' => 'success', 'user' => $user];
+    }
+
+	private function registerUser($applicant)
+    {
+
+        try {
+
+            $user = Sentry::register([
+                'email' => $applicant['email'],
+                'password' => $applicant['password']
+            ]);
+
+            $user->first_name = $applicant['first_name'];
+            $user->last_name = $applicant['last_name'];
+            $user->phone_number = $applicant['phone_number'];
+            $user->cell_phone = $applicant['cell_phone'];
+            $user->gender = $applicant['gender'];
+            $user->update();
 
 
-		} catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
-    		return ['status' => 'fail', 'message' => 'Login field is required.'];
-    	} catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
-    		return ['status' => 'fail', 'message' => 'Password field is required.'];
-    	} catch (Cartalyst\Sentry\Users\UserExistsException $e) {
-    		return ['status' => 'fail', 'message' => 'An user with this Email already exists'];
-    	}
-	}
+            //Let's get the activation code
+            $activationCode = $user->getActivationCode();
+            //Send activation code to the user so he can activate the account
+
+            Mail::send('emails.registration', ['user' => $user, 'activationCode' => $activationCode], function ($message) use ($user) {
+                $message->subject('Email Confirmation');
+                $message->from('echoanik@gmail.com', 'Career Services Office');
+                $message->to($user->email); // Recipient address
+            });
+            return ['status' => 'success', 'user' => $user];
+
+
+        } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
+            return ['status' => 'fail', 'message' => 'Login field is required.'];
+        } catch (Cartalyst\Sentry\Users\PasswordRequiredException $e) {
+            return ['status' => 'fail', 'message' => 'Password field is required.'];
+        } catch (Cartalyst\Sentry\Users\UserExistsException $e) {
+            return ['status' => 'fail', 'message' => 'An user with this Email already exists'];
+        }
+    }
 
 
 
@@ -61,12 +110,21 @@ class AuthController extends Controller {
 
 
 
-
-
-
 	public function postStudentRegistration() {
 		$applicant = Input::all();
-		return $this->registerUser($applicant);
+		$result = $this->registerUser($applicant);
+        if($result['status'] == 'success') {
+            $user = $result['user'];
+            $applicant['user_id'] = $user->id;
+            if($student = $this->students->store($applicant)) {
+                return ['status' => 'success', 'user' => $user, 'student'=> $student ];
+            } else {
+                return ['status' => 'fail', 'errors' => $this->students->get_errors() ];
+            }
+        } else {
+            return $result;
+        }
+
 	}
 
 
@@ -90,6 +148,11 @@ class AuthController extends Controller {
 		    echo 'Give user a message a user was not found with the credential provided';
 		}
 	}
+
+
+
+
+
 
 
 

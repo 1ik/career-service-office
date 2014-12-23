@@ -2,6 +2,10 @@
 
 class DepartmentsController extends \BaseController {
 
+    public function __construct(\cso\departments\DepartmentRepository $departments) {
+        $this->departments = $departments;
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 * GET /departments
@@ -10,7 +14,7 @@ class DepartmentsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return $this->departments->all();
 	}
 
 	/**
@@ -32,7 +36,11 @@ class DepartmentsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        if($this->departments->store()) {
+            return Redirect::route('courses.index');
+        } else {
+            return Redirect::back()->withInputs();
+        }
 	}
 
 	/**

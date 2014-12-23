@@ -9,7 +9,6 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <title>Career Service Office</title>
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/animate.css" type="text/css" />
@@ -315,6 +314,10 @@
         transition : all .4s;
       }
 
+      .icon-holder i {
+        font-size : 4.5em;
+      }
+
 
       .section-b-wrapper {
         background-color: #ffffff;  
@@ -414,14 +417,69 @@
         background-color: none;
       }
 
+      .navbar.sticky {
+        position: fixed;
+        z-index : 99999999;
+        background : white;
+        width: 100%;
+      }
 
 
     </style>
   </head>
   <body>
+
+
+<header class="hidden sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">
+        CAREER SERVICES OFFICE
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="internships-program">INTERNSHIPS</a>
+        </li>
+        <li>
+          <a href="psdp-program">PSDP Programs</a>
+        </li>
+        <li>
+          <a href="searching-jobs">JOBS</a>
+        </li>
+        <li>
+          <a href="services-for-students">Students</a>
+        </li>
+        <li>
+          <a href="alumnies">Alumnies</a>
+        </li>
+        <li>
+          <a href="affiliated-organisations">Organisations</a>
+        </li>
+        <li>
+          <a href="../customize/">Contact us</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
+        <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
   <div class="container-full-width section-a">
     <div class="left-navigation">
-      <a href="" id="signup-link">Sign up</a> | <a id="login-link" href="">Log in</a>
+      <a href="" id="signup-link">Sign up</a> | <a id="login-link" href="/sign-in">Log in</a>
       <div class="signup-extension hidden animated fadeInDown">
         <div class="arrow-up"></div>
           <div class="items">
@@ -450,6 +508,9 @@
         <span class="icon google-plus-icon"></span>
       </div>
     </div>
+
+
+
     <div class="slide-show-container">
       <div class="slides">
         
@@ -928,12 +989,7 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
                               </div>
                             </div>
-                            
                           </div>
-
-
-
-
 
 
 
@@ -957,61 +1013,41 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                                 <div class="col-xs-12 form-group">
                                   <label for="department">Department : </label>
                                   <select class="form-control" name="department" id="student_department">
-                                    <option value="5">Architecture</option>
-                                    <option value="4">BRAC Business School</option>
-                                    <option value="7">Economics and Social Sciences</option>
-                                    <option value="6">English</option>
-                                    <option value="2">Mathematics and natural science (MNS)</option>
-                                    <option value="3">School of Computer Science and Electronic Engineering</option>
+                                    @foreach($departments as $department)
+                                        <option value="{{$department->id}}">{{$department->name}}</option>
+                                    @endforeach
                                   </select>
                                 </div>
 
                                 <div class="col-xs-6 form-group">
                                   <label for="major">Major : </label>
                                   <select class="form-control" name="major" id="student_major">
-                                    <option value="17">Artificial Intelligence</option>
-                                    <option value="15">Circuits</option>
-                                    <option value="12">Computer Science</option>
-                                    <option value="10">Finance</option>
-                                    <option value="11">Human Resource</option>
-                                    <option value="16">Image processing</option>
-                                    <option value="9">Management</option>
-                                    <option value="8">Marketing</option>
-                                    <option value="13">Power</option>
-                                    <option value="14">Telecommunication</option>
+                                    @foreach($courses as $course)
+                                        <option value="{{$course->id}}">{{$course->name}}</option>
+                                    @endforeach
                                   </select>
                                 </div>
 
                                 <div class="col-xs-6 form-group">
                                   <label for="minor">Minor : </label>
                                   <select class="form-control" name="minor" id="student_minor">
-                                    <option value="17">Artificial Intelligence</option>
-                                    <option value="15">Circuits</option>
-                                    <option value="12">Computer Science</option>
-                                    <option value="10">Finance</option>
-                                    <option value="11">Human Resource</option>
-                                    <option value="16">Image processing</option>
-                                    <option value="9">Management</option>
-                                    <option value="8">Marketing</option>
-                                    <option value="13">Power</option>
-                                    <option value="14">Telecommunication</option>
+                                    @foreach($courses as $course)
+                                        <option value="{{$course->id}}">{{$course->name}}</option>
+                                    @endforeach
                                   </select>
                                 </div>
 
                                 <div class="col-xs-12 form-group">
                                   <label for="semester">Semester : </label>
                                   <select class="form-control" name="minor" id="student_semester">
-                                    <option value="17">Second Last</option>
-                                    <option value="15">Last</option>
+                                    <option value="s">Second Last</option>
+                                    <option value="l">Last</option>
                                   </select>
                                 </div>
                             </div>
                           </div>
                           
                         
-
-
-
 
 
                           <!-- personal information -->
@@ -1059,8 +1095,6 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                             </div>
                             <br><br>
                           </div>
-
-
 
 
                           <!-- personal information -->
@@ -1113,7 +1147,12 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                                   </select>
                               </div>
                               <div class="col-sm-12">
-                              <br>
+                                <br/>
+                               <div class="alert alert-success hidden" id="form-success-message">
+                                <button type="button"  class="close" data-dismiss="alert">×</button>
+                                <i class="fa fa-ok-sign"></i><strong>Thank you for signing up!</strong> Please check your email address for further instructions.
+                              </div>
+
                                 <a id="student-form-submit-button" href="#" class="btn btn-s-md btn-default btn-rounded">Submit</a>
                               </div>
                             </div>
@@ -1153,12 +1192,11 @@ structuring a cover letter; require a better understanding of the ‘market’, 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="<?php echo URL::to("assets/site/bootstrap.min.js");?>"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php echo URL::to("assets/site/ie10-viewport-bug-workaround.js");?>"></script>
 
-    <script type="text/javascript" src="http://localhost/projects/cso-drupal/sites/all/themes/themeversity/libs/bxslider/jquery.bxslider.min.js"></script>
 
     <script type="text/javascript">
 
@@ -1246,6 +1284,8 @@ structuring a cover letter; require a better understanding of the ‘market’, 
     
     $('#myModal').on('hidden.bs.modal', function (event) {
       $('input').val('');
+      $('textarea').val('');
+      $('#student-form-submit-button').removeClass('btn-default').removeClass('fa fa-check btn-success');
     });
 
 
@@ -1258,9 +1298,11 @@ structuring a cover letter; require a better understanding of the ‘market’, 
         */
         $('#student-form-submit-button').on('click',function(e) {
 
+
             if($(this).hasClass('btn-success') || $(this).hasClass('btn-disabled')) {
               return;
             }
+
 
             var student = {};
             student.token = $('_token').val();
@@ -1275,9 +1317,9 @@ structuring a cover letter; require a better understanding of the ‘market’, 
             student.student_id = $('#student_studentid').val();
             student.current_cgpa = $('#student_cgpa').val();
             student.credits_completed = $('#student_credits_completed').val();
-            student.department = $('#student_department option:selected').val();
+            student.department_id = $('#student_department option:selected').val();
             student.major = $('#student_major option:selected').val();
-            student.minor = $('#student_major option:selected').val();
+            student.minor = $('#student_minor option:selected').val();
             student.semester = $('#student_semester option:selected').val();
 
 
@@ -1301,13 +1343,17 @@ structuring a cover letter; require a better understanding of the ‘market’, 
             student.bio = $('#student_bio').val();
             student.employment_status = $('#student_employment_status option:selected').val();
 
-
             $(this).html('Submitting...');
             var that = $(this);
             $(this).addClass('disabled');
             $.post('/student-register',student, function(response){
               console.log(response);
-              that.removeClass('disabled').removeClass('btn-default').addClass('fa fa-check btn-success').html('Success');
+              if(response.status == 'success') {
+                $('#form-success-message').removeClass('hidden').addClass('animated fadeIn');
+                that.removeClass('disabled').removeClass('btn-default').addClass('fa fa-check btn-success').html('Success');
+              } else {
+
+              }
             });
 
 
@@ -1331,17 +1377,28 @@ structuring a cover letter; require a better understanding of the ‘market’, 
   <script type="text/javascript">
       
       $(document).ready(function() {
-        
+
         $("#owl-demo").owlCarousel({
           navigation:true,
           responsive: true
+        });
+
+        var winHeight = $(window).height();
+
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() >= winHeight) {
+                $(".navbar.sticky").removeClass('hidden fadeOutDown').addClass('animated fadeInUp');
+            } else {
+                if($('.navbar.sticky').hasClass('animated')) {
+                    $(".navbar.sticky").removeClass('fadeInUp').addClass('fadeOutDown hidden');
+                }
+            }
         });
 
 
 
       });
   </script>
-
-</script>
   </body>
 </html>

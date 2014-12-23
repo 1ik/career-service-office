@@ -85,3 +85,37 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+Route::filter('canViewProfile', function($route, $request){
+
+    $loggedInUser = Sentry::getUser();
+
+    try {
+        $user = Sentry::findUserById($route->getParameter('id'));
+    } catch(\Cartalyst\Sentry\Users\UserNotFoundException $e) {
+        App::abort(404);
+    }
+
+    if($loggedInUser->id != $route->getParameter('id') ) {
+        App::abort(404);
+    }
+
+
+});
+
+Route::filter('correctNameInTheURL', function($route, $request) {
+
+    try {
+        $user = Sentry::findUserById($route->getParameter('id'));
+    } catch(\Cartalyst\Sentry\Users\UserNotFoundException $e) {
+        App::abort(404);
+    }
+
+    $name = $user->first_name . " " . $user->last_name;
+    $name = implode(explode(" ", $name), "-");
+    if($name != $route->getParameter('name')){
+        return Redirect::route($route->getName(), ['id' => $user->id, 'name' => $name]);
+    }
+});
+

@@ -1,1 +1,1 @@
-/Applications/xampp/xamppfiles/htdocs/projects/cso/app/views/departments/index.blade.php
+@extends('admin.layouts.tab-master')

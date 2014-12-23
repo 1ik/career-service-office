@@ -1,14 +1,14 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
-use Faker\Factory as Faker;
-
 class SentryTableSeeder extends Seeder {
 
 	public function run()
 	{
+
+
+
 		$users = [
-			['first_name' => 'Anik', 'last_name' => 'Hasan', 'phone_number' => '063163009', 'cell_phone' => '+8801932986985', 'gender' => 'm', 'password' => 'alumni', 'email' => 'echoanik@gmail.com', 'email_confirmed' => true],
+			['first_name' => 'Anik', 'last_name' => 'Hasan', 'phone_number' => '063163009', 'cell_phone' => '+8801932986985', 'gender' => 'm', 'password' => 'alumni', 'email' => 'echoanik@gmail.com', 'email_confirmed' => true, 'activated' => true],
 			['first_name' => 'Dipankar', 'last_name' => 'Chaki', 'phone_number' => '023311882', 'cell_phone' => '+880171122121211', 'gender' => 'm', 'password' => 'alumni', 'email' => 'dcj@gmail.com', 'email_confirmed' => true],
 			['first_name' => 'Tanjina	', 'last_name' => 'Micky', 'phone_number' => '02882232311', 'cell_phone' => '+880181212112', 'gender' => 'f', 'password' => 'student', 'email' => 'micky@gmail.com', 'email_confirmed' => true],
 			['first_name' => 'Mosharrof', 'last_name' => 'Golam', 'phone_number' => '0187221212', 'cell_phone' => '+88019442322', 'gender' => 'm', 'password' => 'employer', 'email' => 'mosharrofkamal@gmail.com', 'email_confirmed' => true],

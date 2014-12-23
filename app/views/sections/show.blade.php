@@ -1,0 +1,1 @@
+/Applications/XAMPP/xamppfiles/htdocs/projects/cso/app/views/sections/show.blade.php

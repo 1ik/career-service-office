@@ -398,7 +398,7 @@ a.list-group-item:focus {
   left: -9999em;
 }
 .carousel-control {
-  width: 40px;
+  width: 10px;
   color: #999;
   text-shadow: none;
 }

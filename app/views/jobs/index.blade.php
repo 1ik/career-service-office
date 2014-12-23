@@ -1,0 +1,1 @@
+/Applications/XAMPP/xamppfiles/htdocs/projects/cso/app/views/jobs/index.blade.php

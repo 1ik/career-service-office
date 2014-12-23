@@ -13,27 +13,182 @@
 
 
 
+Route::resource('departments', 'DepartmentsController');
+Route::resource('courses', 'CoursesController');
+Route::resource('organisations', 'OrganisationsController');
+Route::resource('organisation_types', 'OrganisationTypesController');
+Route::resource('psdp_registrations', 'PsdpRegistrationsController');
+Route::resource('sections', 'SectionsController');
+Route::get('psdp_registrations/{psdpRegistrationId}/registrants', 'PsdpRegistrationsController@getRegistrants');
+
+
+
+
+Route::group(array('prefix' => 'pages'), function() {
+
+    Route::get('/{slug}', function($slug) {
+        $page = Page::whereSlug($slug)->get()->first();
+        if($page == NULL)
+            App::abort(404);
+        return $page;
+    });
+
+
+    Route::get('{id}/sections', function($id) {
+        $page = Page::with('sections')->find($id);
+        return View::make('sections.edit', compact('page'));
+    });
+
+
+
+
+    Route::get('/edit/{id}', function($id) {
+        $page = Page::find($id);
+        return View::make('pages.edit',compact('page'));
+    });
+
+    Route::post('/update/{id}', function($id) {
+        $page = Page::find($id);
+        $page->update(Input::all());
+        $page->save();
+        return Redirect::to('/pages/edit/'. $page->id );
+    });
+
+
+    Route::get('/{slug}/sections/{section_slug}',function($slug,$section_slug){
+        return Section::all();
+    });
+});
+
+
+
+
+
+Route::group(array('prefix' => 'users'), function() {
+   Route::get('students', 'StudentsController@index');
+});
+
+
+Route::get('/admin', function()
+{
+    return View::make('admin.index');
+});
+Route::get('/sign-in', function(){
+    return View::make('site.signin');
+});
+
+Route::post('/sign-in',['before' =>'csrf', 'uses' => 'AuthController@postLogin']);
+
+
+Route::get('{slug}', function($slug){
+    $depts = App::make('\cso\departments\DepartmentRepository');
+    $courses = App::make('\cso\courses\CourseRepository');
+    $departments = $depts->all();
+    $courses = $courses->all();
+    $page = Page::with('sections')->whereSlug($slug)->get()->first();
+
+    $view = '';
+    switch($page->id) {
+        case 2:
+            $view  = 'internships.landing';
+            break;
+        case 3:
+            $view = 'psdp_registrations.landing';
+            break;
+        case 4:
+            $view = 'jobs.landing';
+            break;
+        case 5:
+            $view = 'students.landing';
+            break;
+        case 6:
+            $view = 'alumnies.landing';
+            break;
+        case 7:
+            $view = 'organisations.landing';
+            break;
+
+    }
+    return View::make($view, compact('departments', 'courses','page'));
+});
+
+
+
+Route::get('contents/single', function(){
+    $depts = App::make('\cso\departments\DepartmentRepository');
+    $courses = App::make('\cso\courses\CourseRepository');
+    $departments = $depts->all();
+    $courses = $courses->all();
+    return View::make('contents.single', compact('departments', 'courses'));
+});
+
+
+Route::group(['prefix' => 'contents'], function(){
+    Route::get('alumni/{uri}',function($uri){
+        $depts = App::make('\cso\departments\DepartmentRepository');
+        $courses = App::make('\cso\courses\CourseRepository');
+        $departments = $depts->all();
+        $courses = $courses->all();
+
+        return View::make('contents.alumni.' . $uri, compact('departments', 'courses'));
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+App::missing(function($exception)
+{
+    return Response::view('errors.missing', array(), 404);
+});
+
+
+
+Route::get('/profile/students/{id}/{name?}',[ 'as' => 'student.profile' ,'before' => ['canViewProfile', 'correctNameInTheURL'], 'uses' => 'StudentsController@show']);
+
+
+
+
+
+
+
+Event::listen('event.test', function($arr)
+{
+    echo "well i should better check what the values are if the values are key then ";
+    var_dump($arr);
+});
+
+
+
+
+
+
+
 
 Route::get('/', function(){
-	return View::make('site.index-new');
+    $depts = App::make('\cso\departments\DepartmentRepository');
+    $courses = App::make('\cso\courses\CourseRepository');
+
+    $departments = $depts->all();
+    $courses = $courses->all();
+	return View::make('site.index-new', compact('departments', 'courses'));
 });
 
-
-Route::get('test', function(){
-	
-	// Let's register a user.
-    
-    $user = Sentry::register(array(
-        'email'    => 'sdfsdf@gmail.com',
-        'password' => 'test',
-    ));
-
-    // Let's get the activation code
-    $activationCode = $user->getActivationCode();
-    
-    var_dump($activationCode);
-    var_dump($user->id);
-});
 
 
 Route::get('activate-user/{user_id}/{code}', 'AuthController@activate_user');
@@ -43,63 +198,8 @@ Route::get('not-my-email/{user_id}/{code}', 'AuthController@activate_user');
 Route::get('reject-registration/{user_id}/{code}', 'AuthController@rejectRegistration');
 
 
-Route::get('/admin', function()
-{
-	return View::make('admin.index');
-});
+
 
 
 Route::post('/student-register', 'AuthController@postStudentRegistration');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('facebook-feeds',function() {
-
-	header( 'Content-Type: application/json' );
-	$page_id = '22505712881';
-	$fb_url = 'https://www.facebook.com/feeds/page.php?id=';
-	$json_url = $fb_url . '22505712881&format=json';
-	
-	$curl = curl_init();
-	
-	$header[0] = 'Accept: text/xml,application/xml,application/xhtml+xml,';
-	$header[0] .= 'text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5';
-	$header[] = 'Cache-Control: max-age=0';
-	$header[] = 'Connection: keep-alive';
-	$header[] = 'Keep-Alive: 300';
-	$header[] = 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7';
-	$header[] = 'Accept-Language: en-us,en;q=0.5';
-	$header[] = 'Pragma: ';
-	
-	curl_setopt( $curl, CURLOPT_URL, $json_url );
-	curl_setopt( $curl, CURLOPT_USERAGENT, 'Mozilla' );
-	curl_setopt( $curl, CURLOPT_HTTPHEADER, $header );
-	curl_setopt( $curl, CURLOPT_REFERER, '' );
-	curl_setopt( $curl, CURLOPT_ENCODING, 'gzip,deflate' );
-	curl_setopt( $curl, CURLOPT_AUTOREFERER, true );
-	curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
-	curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false );
-    curl_setopt( $curl, CURLOPT_SSL_VERIFYHOST, false );
-	curl_setopt( $curl, CURLOPT_TIMEOUT, 10 );
-
-	$json = curl_exec($curl);
-	curl_close($curl); 
-	echo $json;
-	    
-});

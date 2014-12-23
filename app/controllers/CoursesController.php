@@ -2,6 +2,11 @@
 
 class CoursesController extends \BaseController {
 
+
+    public function __construct(\cso\courses\CourseRepository $courses, \cso\departments\DepartmentRepository $departments) {
+        $this->courses = $courses;
+        $this->departments = $departments;
+    }
 	/**
 	 * Display a listing of the resource.
 	 * GET /courses
@@ -10,7 +15,9 @@ class CoursesController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$courses = $this->courses->all();
+        $departments = $this->departments->all();
+        return View::make('courses.index', compact('courses', 'departments'));
 	}
 
 	/**
@@ -21,7 +28,7 @@ class CoursesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 	/**
@@ -32,7 +39,11 @@ class CoursesController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        if($this->courses->store()) {
+            return Redirect::route('courses.index');
+        } else {
+            return Redirect::back()->withInputs();
+        }
 	}
 
 	/**

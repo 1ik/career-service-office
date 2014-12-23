@@ -20,6 +20,10 @@ class DepartmentsTableSeeder extends Seeder {
 			['name' => 'Electrical and Electronics Engineering'],
 		];
 
+        foreach($depts as $d) {
+            Department::create($d);
+        }
+
 	}
 
 }

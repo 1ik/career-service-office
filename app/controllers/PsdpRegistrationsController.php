@@ -6,6 +6,7 @@ class PsdpRegistrationsController extends \BaseController {
     public function __construct(\cso\registrations\PsdpRegistrationRepository $psdpRegis, \cso\registrations\RegistrantRepository $registrants) {
         $this->psdpRegistrations = $psdpRegis;
         $this->registrants = $registrants;
+        $this->beforeFilter('adminOnly');
     }
 
 

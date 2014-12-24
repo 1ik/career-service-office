@@ -15,6 +15,13 @@ class AuthController extends Controller {
         {
             $credentials = Input::except("_token");
             $user = Sentry::authenticate($credentials, false);
+
+            $admin = Sentry::findGroupByName('admin');
+            if($user->inGroup($admin)) {
+                return Redirect::route('admin.dashboard');
+            }
+
+
             $student = Student::whereUserId($user->id)->get();
             $name = $user->first_name . " " . $user->last_name;
             $name = implode(explode(" ", $name), "-");
@@ -47,8 +54,21 @@ class AuthController extends Controller {
         }
 
         return Redirect::back()->withErrors($error);
-
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	private function registerUser($applicant)
     {

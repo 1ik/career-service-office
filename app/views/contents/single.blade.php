@@ -256,9 +256,9 @@
       }
 
       .featured-header {
-        height: 10em;
         background-color: #ffffff;
         padding-bottom: 10px;
+        padding-top: 3em;
       }
 
       .featured-header a.title-link  {
@@ -575,27 +575,12 @@
         </div>
       </div>
     </div>
+
     <div class="right-navigation">
       <div class="social-icons">
         <span class="icon fb-icon"></span>
         <span class="icon twitter-icon"></span>
         <span class="icon google-plus-icon"></span>
-      </div>
-    </div>
-    <div class="slide-show-container">
-      <div class="slides">
-
-        <div class="slide">
-          <img class="animated fadeInUp" src="{{URL::to('/assets/images/alumni.jpg');}}" alt="">
-          <div class="slide-content">
-                <div class="col-xs-12 col-md-9 heading">
-                    <h1 class="animated fadeInRight">
-                        Assist Current Rutgers Students
-                    </h1>
-                </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -612,7 +597,7 @@
           <div class="col-md-9 navigation-section">
                <div class="row">
                     <div class="col-xs-8 pull-right">
-                        <h3>SEARCHING JOBS AND LOCATING VACENCIES</h3>
+                        <h3>{{$section->title}}</h3>
                     </div>
                </div>
           </div>
@@ -624,12 +609,31 @@
         <div class="row">
             <div class="col-xs-4">
                 <div class="row section-x">
-
+                    <ul class="list-group alt">
+                        @foreach($relateds as $related)
+                          <li class="list-group-item">
+                            <div class="media">
+                              {{--<span class="pull-left thumb-sm"><img src="images/a0.png" alt="John said" class="img-circle"></span>--}}
+                              <div class="pull-right text-danger m-t-sm">
+                                {{--<i class="fa fa-circle"></i>--}}
+                              </div>
+                              <div class="media-body">
+                                <div><a href="{{URL::to('/contents/' . $related->slug)}}">{{$related->title}}</a></div>
+                                {{--<small class="text-muted">about 2 minutes ago</small>--}}
+                              </div>
+                            </div>
+                          </li>
+                        @endforeach
+                    </ul>
 
                 </div>
             </div>
             <div class="col-xs-8" >
-
+                <section class="panel panel-default">
+                    <div class="panel-body">
+                        {{$section->contents}}
+                    </div>
+                </section>
             </div>
         </div>
     </div>

@@ -574,54 +574,7 @@
 
 
 
-  <header class="hidden sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-
-    <div class="container">
-
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="../" class="navbar-brand">
-            CAREER SERVICES OFFICE
-        </a>
-      </div>
-
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="internships-program">INTERNSHIPS</a>
-          </li>
-          <li>
-            <a href="psdp-program">PSDP Programs</a>
-          </li>
-          <li>
-            <a href="searching-jobs">JOBS</a>
-          </li>
-
-          <li class="active">
-            <a href="services-for-students">Students</a>
-          </li>
-          <li>
-            <a href="alumnies">Alumnies</a>
-          </li>
-          <li>
-            <a href="affiliated-organisations">Organisations</a>
-          </li>
-          <li>
-            <a href="../customize/">Contact us</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-          <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    @include('site.navigation')
 
 
 
@@ -720,7 +673,7 @@
                 <p class="description" data-sr='enter up wait .4s'>
                     {{$page->sections[0]->summery}}
                 </p>
-                <a class="btn btn-default btn-rounded" href="" data-sr='enter bottom wait .4s'>
+                <a class="btn btn-default btn-rounded" href="{{URL::to('/contents/' . $page->sections[0]->slug)}}" data-sr='enter bottom wait .4s'>
                     Know More <i class="ti-angle-double-right" style="font-size: 10px"></i>
                 </a>
             </div>
@@ -730,7 +683,7 @@
                 <p class="description" data-sr='enter up wait .4s'>
                     {{$page->sections[1]->summery}}
                 </p>
-                <a class="btn btn-default btn-rounded" href="" data-sr='enter bottom wait .4s'>
+                <a class="btn btn-default btn-rounded" href="" data-sr='enter bottom wait .4s' href="{{URL::to('/contents/' . $page->sections[1]->slug)}}">
                     Know More <i class="ti-angle-double-right" style="font-size: 10px"></i>
                 </a>
             </div>
@@ -749,21 +702,21 @@
                             <p class="text-center">
                               <em class="h4 text-mute">{{$page->sections[2]->title}}</em><br>
                               <small class="text-muted">{{$page->sections[2]->summery}}</small><br/>
-                              <a class="btn btn-default btn-xs btn-rounded" href="">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
+                              <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[2]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
                             </p>
                           </div>
                           <div class="item">
                             <p class="text-center">
                               <em class="h4 text-mute">{{$page->sections[3]->title}}</em><br>
                               <small class="text-muted">{{$page->sections[3]->summery}}</small><br/>
-                              <a class="btn btn-default btn-xs btn-rounded" href="">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
+                              <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[3]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
                             </p>
                           </div>
                           <div class="item">
                             <p class="text-center">
                               <em class="h4 text-mute">{{$page->sections[4]->title}}</em><br>
                               <small class="text-muted">{{$page->sections[4]->summery}}</small><br/>
-                              <a class="btn btn-default btn-xs btn-rounded" href="">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
+                              <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[4]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
                             </p>
                           </div>
                         </div>

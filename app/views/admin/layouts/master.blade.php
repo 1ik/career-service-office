@@ -347,7 +347,7 @@
                       </a>
                       <ul class="nav dk">
                         <li >
-                          <a href="profile.html" class="auto">                                                        
+                          <a href="{{URL::to('admin/users/administrators')}}" class="auto">
                             <i class="i i-dot"></i>
 
                             <span>Administrators</span>

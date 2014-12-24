@@ -2,59 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1835d653-10da-41ec-a35a-56961549aaee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/courses/CourseRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/pages/CourseRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/organisations/OrganisationRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/organisations/OrganisationTypeRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/registrations/psdp/PSDPRegistration.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/registrations/psdp/PsdpRegistrationRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/registrations/registrants/RegistrantRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/registrations/Registration.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/registrations/RegistrationRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/pages/SectionsRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/users/StudentRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/services/UserServices.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/contents/alumni/assist-current-rutgers-students.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cso.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/organisations/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/registrants/psdp_registrants/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/internships/landing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/jobs/landing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/organisations/landing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/landing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/profiles/students/layouts/master.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/layouts/navigation.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/profiles/students/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/site/signin.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/contents/single.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/users/admins/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/site/navigation.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/admin/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/dashboard.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/controllers/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Course.php" afterPath="$PROJECT_DIR$/app/models/Course.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CoursesController.php" afterPath="$PROJECT_DIR$/app/controllers/CoursesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/CoursesTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/CoursesTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Department.php" afterPath="$PROJECT_DIR$/app/models/Department.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/DepartmentsController.php" afterPath="$PROJECT_DIR$/app/controllers/DepartmentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DepartmentsTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DepartmentsTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" afterPath="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/SentryTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/SentryTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/app.css" afterPath="$PROJECT_DIR$/public/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="$PROJECT_DIR$/app/filters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/thumbnails-icons/icons.css" afterPath="$PROJECT_DIR$/public/assets/css/thumbnails-icons/icons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/index-new.blade.php" afterPath="$PROJECT_DIR$/app/views/site/index-new.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/index.blade.php" afterPath="$PROJECT_DIR$/app/views/courses/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/departments/index.blade.php" afterPath="$PROJECT_DIR$/app/views/departments/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/jquery.min.js" afterPath="$PROJECT_DIR$/public/assets/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/internships/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/internships/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/jobs/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organisations/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/organisations/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/students/landing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contents/single.blade.php" afterPath="$PROJECT_DIR$/app/views/contents/single.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cso.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,21 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SentryTableSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/seeds/SentryTableSeeder.php">
+      <file leaf-file-name="landing.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/students/landing.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="465">
-              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18376723" vertical-offset="0" max-vertical-offset="720">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.6640625" vertical-offset="10360" max-vertical-offset="20100">
+              <caret line="719" column="32" selection-start-line="719" selection-start-column="32" selection-end-line="719" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -112,11 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/registrants/psdp_registrants/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" />
-        <option value="$PROJECT_DIR$/app/models/Registrant.php" />
-        <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/cso/registrations/psdp/PsdpRegistrationRepository.php" />
         <option value="$PROJECT_DIR$/app/views/profiles/students/show.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_12_14_190918_create_psdp_registrations_table.php" />
@@ -128,21 +78,16 @@
         <option value="$PROJECT_DIR$/app/models/Student.php" />
         <option value="$PROJECT_DIR$/app/cso/users/StudentRepository.php" />
         <option value="$PROJECT_DIR$/app/controllers/StudentsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
-        <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/app/views/students/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/thumbnails-icons/icons.css" />
         <option value="$PROJECT_DIR$/app/views/courses/index.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/app.css" />
         <option value="$PROJECT_DIR$/app/views/site/index-new.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/contents/single.blade.php" />
         <option value="$PROJECT_DIR$/app/views/contents/alumni/assist-current-rutgers-students.blade.php" />
         <option value="$PROJECT_DIR$/app/views/site/signin.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/icons/internship_icons/flaticon.css" />
         <option value="$PROJECT_DIR$/app/cso/pages/CourseRepository.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_12_22_134912_create_pages_table.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_12_23_073229_create_sections_table.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/PagesTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/views/pages/edit.blade.php" />
@@ -153,16 +98,26 @@
         <option value="$PROJECT_DIR$/app/controllers/SectionsController.php" />
         <option value="$PROJECT_DIR$/app/models/Section.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/SectionsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/database/seeds/SentryTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/filters.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/users/admins/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/CoursesController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" />
+        <option value="$PROJECT_DIR$/app/views/contents/single.blade.php" />
         <option value="$PROJECT_DIR$/app/views/internships/landing.blade.php" />
         <option value="$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/SectionsTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/views/jobs/landing.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/students/landing.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" />
         <option value="$PROJECT_DIR$/app/views/organisations/landing.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/SentryTableSeeder.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/views/site/navigation.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/students/landing.blade.php" />
       </list>
     </option>
   </component>
@@ -198,7 +153,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,7 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="courses" />
+              <option name="myItemId" value="internships" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,6 +321,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,15 +352,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -474,48 +429,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/themify-icons/SVG/filter.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/StudentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5952381" vertical-offset="405" max-vertical-offset="1470">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41347626" vertical-offset="30" max-vertical-offset="2895">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/users/StudentRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5972435" vertical-offset="0" max-vertical-offset="653">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8851455" vertical-offset="22" max-vertical-offset="735">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12557428" vertical-offset="2242" max-vertical-offset="2970">
-          <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jobs/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
@@ -576,18 +489,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contents/single.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.517611" vertical-offset="8437" max-vertical-offset="18705">
-          <caret line="585" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="1241" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contents/alumni/assist-current-rutgers-students.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="9485" max-vertical-offset="18945">
           <caret line="660" column="32" selection-start-line="660" selection-start-column="32" selection-end-line="660" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5982275" vertical-offset="0" max-vertical-offset="677">
           <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -610,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34456354" vertical-offset="0" max-vertical-offset="1365">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,15 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="660">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3797856" vertical-offset="1027" max-vertical-offset="1770">
-          <caret line="94" column="65" selection-start-line="94" selection-start-column="65" selection-end-line="94" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -634,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.375" vertical-offset="795" max-vertical-offset="1770">
           <caret line="69" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,23 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.78125" vertical-offset="3615" max-vertical-offset="8700">
-          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1328125" vertical-offset="4940" max-vertical-offset="8655">
-          <caret line="335" column="34" selection-start-line="335" selection-start-column="34" selection-end-line="335" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45941806" vertical-offset="0" max-vertical-offset="675">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2109375" vertical-offset="0" max-vertical-offset="1305">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,22 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13782541" vertical-offset="0" max-vertical-offset="653">
           <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/departments/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/courses/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3828125" vertical-offset="255" max-vertical-offset="1515">
-          <caret line="76" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="95" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -714,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.114854515" vertical-offset="0" max-vertical-offset="653">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27565083" vertical-offset="0" max-vertical-offset="653">
           <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5283308" vertical-offset="615" max-vertical-offset="1725">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65625" vertical-offset="0" max-vertical-offset="810">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6661562" vertical-offset="750" max-vertical-offset="1590">
           <caret line="79" column="82" selection-start-line="79" selection-start-column="82" selection-end-line="79" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,53 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/internships/landing.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4765625" vertical-offset="10150" max-vertical-offset="19800">
-          <caret line="697" column="20" selection-start-line="697" selection-start-column="20" selection-end-line="697" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="435">
           <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.333334" vertical-offset="9475" max-vertical-offset="19860">
-          <caret line="661" column="0" selection-start-line="661" selection-start-column="0" selection-end-line="661" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#1;n#div#2;n#div#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#p#1;n#div#2;n#div#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#2;n#div#2;n#div#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#p#2;n#div#2;n#div#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#2;n#div#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#p#3;n#div#2;n#div#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/jobs/landing.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4921875" vertical-offset="10080" max-vertical-offset="19665">
-          <caret line="693" column="23" selection-start-line="693" selection-start-column="23" selection-end-line="693" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/students/landing.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6171875" vertical-offset="11215" max-vertical-offset="20805">
-          <caret line="774" column="28" selection-start-line="774" selection-start-column="28" selection-end-line="774" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -822,50 +632,179 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/alumnies/landing.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.421875" vertical-offset="11190" max-vertical-offset="20835">
-          <caret line="764" column="44" selection-start-line="764" selection-start-column="44" selection-end-line="764" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/SectionsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8359375" vertical-offset="2285" max-vertical-offset="3120">
           <caret line="188" column="49" selection-start-line="188" selection-start-column="49" selection-end-line="188" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/organisations/landing.blade.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.153125" vertical-offset="11122" max-vertical-offset="21090">
-          <caret line="748" column="24" selection-start-line="748" selection-start-column="24" selection-end-line="748" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.390625" vertical-offset="965" max-vertical-offset="3030">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.19601838" vertical-offset="67" max-vertical-offset="720">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/SentryTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="465">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.53125" vertical-offset="110" max-vertical-offset="750">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/views/courses/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18376723" vertical-offset="0" max-vertical-offset="720">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state vertical-scroll-proportion="1.4343598" vertical-offset="255" max-vertical-offset="1515">
+          <caret line="76" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="95" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/departments/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20673813" vertical-offset="0" max-vertical-offset="653">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/users/admins/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0859375" vertical-offset="365" max-vertical-offset="1005">
+          <caret line="28" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4027565" vertical-offset="922" max-vertical-offset="2250">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3984375" vertical-offset="0" max-vertical-offset="3195">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CoursesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2109375" vertical-offset="0" max-vertical-offset="1575">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1740">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contents/single.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28125" vertical-offset="8805" max-vertical-offset="18765">
+          <caret line="599" column="45" selection-start-line="599" selection-start-column="45" selection-end-line="599" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0234375" vertical-offset="375" max-vertical-offset="8700">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/layouts/navigation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2578125" vertical-offset="7020" max-vertical-offset="19215">
+          <caret line="479" column="25" selection-start-line="479" selection-start-column="25" selection-end-line="479" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jobs/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4921875" vertical-offset="7290" max-vertical-offset="18990">
+          <caret line="507" column="31" selection-start-line="507" selection-start-column="31" selection-end-line="507" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/internships/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5234375" vertical-offset="6745" max-vertical-offset="19200">
+          <caret line="472" column="4" selection-start-line="472" selection-start-column="4" selection-end-line="472" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/alumnies/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2375" vertical-offset="8488" max-vertical-offset="20115">
+          <caret line="576" column="29" selection-start-line="576" selection-start-column="29" selection-end-line="576" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3203125" vertical-offset="2360" max-vertical-offset="3000">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/organisations/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6140625" vertical-offset="8952" max-vertical-offset="20385">
+          <caret line="623" column="0" selection-start-line="623" selection-start-column="0" selection-end-line="623" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/navigation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.390625" vertical-offset="35" max-vertical-offset="765">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/landing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6640625" vertical-offset="10360" max-vertical-offset="20100">
+          <caret line="719" column="32" selection-start-line="719" selection-start-column="32" selection-end-line="719" selection-end-column="32" />
           <folding />
         </state>
       </provider>

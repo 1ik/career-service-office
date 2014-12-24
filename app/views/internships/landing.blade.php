@@ -301,7 +301,7 @@
         /*border: 2px solid #F2F2F2;*/
         display: inline-block;
         width: 100%;
-        height: 230px;
+        min-height: 20em;
         position: relative;
         transition : all .4s;
       }
@@ -470,50 +470,8 @@
 
 
 
-  <header class="hidden sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="../" class="navbar-brand">
-            CAREER SERVICES OFFICE
-        </a>
-      </div>
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="internships-program">INTERNSHIPS</a>
-          </li>
-          <li>
-            <a href="psdp-program">PSDP Programs</a>
-          </li>
-          <li>
-             <a href="searching-jobs">JOBS</a>
-          </li>
-          <li>
-            <a href="services-for-students">Students</a>
-          </li>
-          <li>
-            <a href="alumnies">Alumnies</a>
-          </li>
-          <li>
-            <a href="affiliated-organisations">Organisations</a>
-          </li>
-          <li>
-            <a href="../customize/">Contact us</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-          <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    @include('site.navigation')
+
 
 
 
@@ -615,6 +573,7 @@
                   <p>
                        {{$page->sections[0]->summery}}
                   </p>
+                  <a href="{{URL::to('contents/' . $page->sections[0]->slug )}}" class="btn btn-default btn-xs">More</a>
                 </div>
             </div>
         </div>
@@ -632,6 +591,7 @@
                   <p>
                        {{$page->sections[1]->summery}}
                   </p>
+                  <a href="{{URL::to('contents/' . $page->sections[1]->slug )}}" class="btn btn-default btn-xs">More</a>
                 </div>
             </div>
         </div>
@@ -646,13 +606,10 @@
                   <p>
                        {{$page->sections[2]->summery}}
                   </p>
+                  <a href="{{URL::to('contents/' . $page->sections[2]->slug )}}" class="btn btn-default btn-xs">More</a>
                 </div>
             </div>
         </div>
-
-
-
-
 
       </div>
 
@@ -671,11 +628,12 @@
                     <i class="flaticon-user3"></i>
                   </div>
                   <div class="section-content">
-                      <p class="section-title">{{$page->sections[2]->title}}</p>
+                      <p class="section-title">{{$page->sections[3]->title}}</p>
                       <div class="section-description">
                         <p>
                              {{$page->sections[3]->summery}}
                         </p>
+                        <a href="{{URL::to('contents/' . $page->sections[3]->slug )}}" class="btn btn-default btn-xs">More</a>
                       </div>
                   </div>
               </div>
@@ -685,11 +643,12 @@
                     <i class="flaticon-job"></i>
                   </div>
                   <div class="section-content">
-                      <p class="section-title">{{$page->sections[2]->title}}</p>
+                      <p class="section-title">{{$page->sections[4]->title}}</p>
                       <div class="section-description">
                         <p>
                              {{$page->sections[4]->summery}}
                         </p>
+                        <a href="{{URL::to('contents/' . $page->sections[4]->slug )}}" class="btn btn-default btn-xs">More</a>
                       </div>
                   </div>
               </div>
@@ -699,11 +658,12 @@
                     <i class="flaticon-job3"></i>
                   </div>
                   <div class="section-content">
-                    <p class="section-title">{{$page->sections[2]->title}}</p>
+                    <p class="section-title">{{$page->sections[5]->title}}</p>
                     <div class="section-description">
                       <p>
                            {{$page->sections[5]->summery}}
                       </p>
+                      <a href="{{URL::to('contents/' . $page->sections[5]->slug )}}" class="btn btn-default btn-xs">More</a>
                     </div>
                 </div>
               </div>

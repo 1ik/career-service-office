@@ -87,6 +87,29 @@ Route::filter('csrf', function()
 });
 
 
+
+
+
+
+Route::filter('adminOnly', function($route,$request){
+    $loggedInUser = Sentry::getUser();
+    $adminGroup = Sentry::findGroupByName('admin');
+
+    if( !$loggedInUser || ! $loggedInUser->inGroup($adminGroup) ) {
+        App::abort(404);
+    }
+
+});
+
+
+
+
+
+
+
+
+
+
 Route::filter('canViewProfile', function($route, $request){
 
     $loggedInUser = Sentry::getUser();
@@ -103,6 +126,15 @@ Route::filter('canViewProfile', function($route, $request){
 
 
 });
+
+
+
+
+
+
+
+
+
 
 Route::filter('correctNameInTheURL', function($route, $request) {
 

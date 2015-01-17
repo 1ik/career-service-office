@@ -2,9 +2,14 @@
 
 class OrganisationsController extends \BaseController {
 
-    public function __construct(\cso\organisations\OrganisationTypeRepository $orgTypes, \cso\organisations\OrganisationRepository $orgs) {
+    public function __construct(
+            \cso\organisations\OrganisationTypeRepository $orgTypes,
+            \cso\organisations\OrganisationRepository $orgs)
+    {
         $this->orgTypes = $orgTypes;
         $this->orgs = $orgs;
+        $this->beforeFilter('auth');
+        $this->beforeFilter('adminOnly', ['except' => ['index']]);
     }
 
 	/**
@@ -28,7 +33,8 @@ class OrganisationsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+        $organisationTypes = $this->orgTypes->all();
+        return View::make('organisations.create', compact('organisationTypes'));
 	}
 
 	/**
@@ -45,6 +51,8 @@ class OrganisationsController extends \BaseController {
             return Redirect::back()->withErrors($this->orgs->get_errors());
         }
 	}
+
+
 
 	/**
 	 * Display the specified resource.

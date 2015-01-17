@@ -3447,6 +3447,12 @@ fieldset[disabled] .i-checks input + i:before {
 .no-touch .scroll-y:active {
   overflow-y: auto;
 }
+
+
+p.error {
+    color : red;
+}
+
 .no-touch .hover-action {
   display: none;
 }
@@ -3528,3 +3534,4 @@ fieldset[disabled] .i-checks input + i:before {
     padding: 15px;
   }
 }
+

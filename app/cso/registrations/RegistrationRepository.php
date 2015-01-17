@@ -21,4 +21,21 @@ class RegistrationRepository extends Repository {
         parent::__construct(new Registration);
     }
 
+
+    public function close($registrationId)
+    {
+        $registration = Registration::find($registrationId);
+        $registration->open = 0;
+        $registration->update();
+        return true;
+    }
+
+    public function open($registrationId)
+    {
+        $registration = Registration::find($registrationId);
+        $registration->open = 1;
+        $registration->update();
+        return true;
+    }
+
 }

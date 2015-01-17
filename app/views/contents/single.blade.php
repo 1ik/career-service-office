@@ -503,6 +503,10 @@
 
 
 
+<?php
+    $user = Sentry::getUser();
+?>
+
 
   <header class="sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
@@ -526,7 +530,7 @@
           <li>
             <a href="{{URL::to('psdp-program')}}">PSDP Programs</a>
           </li>
-          <li class="active">
+          <li>
             <a href="{{URL::to('searching-jobs')}}">JOBS</a>
           </li>
           <li>
@@ -542,10 +546,26 @@
             <a href="../customize/">Contact us</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-          <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
-        </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if(! Sentry::check())
+                    <li>
+                        <a href="">Join Us</a>
+                    </li>
+                    <li>
+                        <a href="{{URL::to('sign-in')}}">Sign in</a>
+                    </li>
+                @else
+                    <li>
+                        <?php $user = Sentry::getUser(); ?>
+                        <a href="{{URL::route('users.profile' , $user->id)}}">{{$user->first_name}} {{$user->last_name}}</a>
+                    </li>
+                    <li>
+                        <a href="{{URL::to('sign-out')}}">
+                            <i class="fa fa-power-off"></i>
+                        </a>
+                    </li>
+                @endif
+            </ul>
 
       </nav>
     </div>
@@ -639,109 +659,12 @@
     </div>
 
 
-    <div class="row footer">
-      <div class="row footer-head">
-          <p>SUBSCRIBE US TO GET REGULAR UPDATES</p>
-          <form class="form-inline" role="form">
-              <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-              </div>
-              <a href="#modal-form" class="btn btn-success" data-toggle="modal">Subscribe!</a>
-          </form>
-      </div>
+
+    <!--footer-->
+    @include('site.footer')
+    <!--footer-->
 
 
-      <div class="row footer-body-wrapper">
-          <div class="footer-body">
-
-            <div class="col-md-5" >
-              <h3>Recent Posts</h3>
-              <div class="post-links">
-                <ul>
-                  <li>
-                    <p><i class="ti-angle-double-right"></i>
-                    <a href="">
-                      The Career Services Office (CSO), BRAC University Launches a Partnership with Voluntary Service Overseas (VSO) Bangladesh
-                    </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                    <i class="ti-angle-double-right"></i>
-                    <a href="">Career Serfvice office becomes dedicated job
-                    partner with BDJobs.</a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <i class="ti-angle-double-right"></i>
-                      <a href="">Career Fare in Westin</a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <i class="ti-angle-double-right"></i>
-                      <a href="">Loren ipsum dolor sit amet</a>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-
-            <div class="col-md-4 ">
-              <h3>EVENTS</h3>
-              <div class="post-links">
-                <ul>
-                  <li>
-                    <p>
-                      <a href="">
-                        <i class="ti-angle-double-right"></i> Fall 2015 PSDP Registrations
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="">
-                        <i class="ti-angle-double-right"></i>
-                        Internship Registrations for 2015 Fall Open
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="">
-                        <i class="ti-angle-double-right"></i> PSDP Registration 2014
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href=""><i class="ti-angle-double-right"></i> Spring 2014 Registrations</a>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <h3>HOTLINE </h3>
-              <p>
-                  We are always eger to listen from you. Please feel free to contact for any purpose in the following address.
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-mobile" style="font-size:14px"></i> +880 1932 986 985
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-phone" style="font-size:14px"></i> +880 0292121233
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-envelope-o" style="font-size:14px"></i> hello[.]cso.bracu.ac.bd
-              </p>
-            </div>
-          </div>
-      </div>
-    </div>
 
   </div>
   <!--container--ful-width-->

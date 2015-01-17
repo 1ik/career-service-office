@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => "echoanik@gmail.com", 'name' => "Anik Hasan"),
+	'from' => array('address' => "careerservicesbracu@gmail.com", 'name' => "Career Service"),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => "echoanik",
+	'username' => "careerservicesbracu",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => "maroon&*5",
+	'password' => "csobracu",
 
 	/*
 	|--------------------------------------------------------------------------

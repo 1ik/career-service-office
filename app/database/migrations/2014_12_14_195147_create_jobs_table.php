@@ -20,8 +20,13 @@ class CreateJobsTable extends Migration {
             $table->string('category');
             $table->string('url');
             $table->double('salary');
+            $table->integer('vacancy');
             $table->integer('organisation_id')->unsigned();
             $table->integer('registration_id')->unsigned();
+            $table->boolean('hot');
+            $table->string('attachment');
+            $table->integer('poster');
+            $table->integer('approved_by')->default(-1);
             $table->timestamps();
             $table->foreign('organisation_id')->references('id')->on('organisations')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('registration_id')->references('id')->on('registrations')->onDelete('cascade')->onUpdate('cascade');

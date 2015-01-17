@@ -12,7 +12,8 @@ class OrganisationTypeRepository extends Repository {
     public static $rules = [];
     public static $messages = [];
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct(new OrganisationType);
     }
 }

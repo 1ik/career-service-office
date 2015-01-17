@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>Career Service Office</title>
+    <title>Office of Career Services & Alumni Relations</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/animate.css" type="text/css" />
@@ -119,7 +119,6 @@
         position: fixed;
         z-index: 99999999;
       }
-
       
 
       .signup-extension .arrow-up {
@@ -424,62 +423,15 @@
         width: 100%;
       }
 
-
     </style>
   </head>
   <body>
 
-
-<header class="hidden sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="../" class="navbar-brand">
-        CAREER SERVICES OFFICE
-      </a>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="internships-program">INTERNSHIPS</a>
-        </li>
-        <li>
-          <a href="psdp-program">PSDP Programs</a>
-        </li>
-        <li>
-          <a href="searching-jobs">JOBS</a>
-        </li>
-        <li>
-          <a href="services-for-students">Students</a>
-        </li>
-        <li>
-          <a href="alumnies">Alumnies</a>
-        </li>
-        <li>
-          <a href="affiliated-organisations">Organisations</a>
-        </li>
-        <li>
-          <a href="../customize/">Contact us</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-        <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
+@include('site.navigation')
 
   <div class="container-full-width section-a">
     <div class="left-navigation">
-      <a href="" id="signup-link">Sign up</a> | <a id="login-link" href="/sign-in">Log in</a>
+      <a id="signup-link">Sign up</a> | <a id="login-link" href="/sign-in">Log in</a>
       <div class="signup-extension hidden animated fadeInDown">
         <div class="arrow-up"></div>
           <div class="items">
@@ -487,11 +439,11 @@
               <img src="assets/images/student.png" alt="" width="25px" height="25px">
               <p>students</p>
             </div>
-            <div class="item" data-text="Stay Up to Date">
+            <div class="item" data-text="Stay Up to Date" data-toggle="modal" data-target="#alumniModal">
               <img src="assets/images/alumni.png" alt="" width="35px" height="25px">
               <p>alumnies</p>
             </div>
-            <div class="item" data-text="Find Great candidates">
+            <div class="item" data-text="Find Great candidates" data-toggle="modal" data-target="#employerModal">
               <img src="assets/images/employer.png" alt="" width="25px" height="25px">
               <p>employers</p>
             </div>
@@ -515,7 +467,7 @@
       <div class="slides">
         
         <div class="slide">
-          <img class="animated fadeInUp" src="{{URL::to('/assets/images/slides/1.png');}}" alt="">
+          <img class="animated fadeInUp" src="{{URL::to('/files/slider/slide1.JPG');}}" alt="">
           <div class="slide-content">
             <h2 class="animated fadeInRight">We have great offer going on in our campus. <br/> So what are you waiting for.</h2>
             <br><br>
@@ -524,24 +476,23 @@
         </div>
 
         <div class="slide hidden" id="slide2">
-          <img class="animated fadeInRight" src="{{URL::to('/assets/images/slides/2.png');}}" alt="">
+          <img class="animated fadeInRight" src="{{URL::to('/files/slider/slide2.JPG');}}" alt="">
           <div class="slide-content">
             <h2 class="animated fadeInRight">Interviews has changed the way it used be.</h2>
-            <p style="font-size : 1.9rem" class="animated fadeInRight">People are no longer dumbass like they used to be. So to compete with them skills are are essentials.</p>
+            <p style="font-size : 1.9rem" class="animated fadeInRight">Loren ipsum dolor sit amet .Loren ipsum dolor sit amet .Loren ipsum dolor sit amet .Loren ipsum dolor sit amet .</p>
             <br><br>
             <a class="animated flipInX" href="">INTERVIEW Skills <span class="ti-arrow-right"></span></a>
           </div>
         </div>
         
         <div class="slide hidden">
-          <img class="animated fadeInLeft" src="{{URL::to('/assets/images/slides/3.png');}}" alt="">
+          <img class="animated fadeInLeft" src="{{URL::to('/files/slider/slide3.JPG');}}" alt="">
           <div class="slide-content">
-              <h2 class="animated fadeInDown">Know your shit. <br/> ROCK THE WORLD.</h2>
+              <h2 class="animated fadeInDown">Loren ipsum dolor sit amet. <br/> shell wef wef w wefwef.</h2>
               <br><br>
               <a class="animated flipInY" href="">ROCK NOW <span class="ti-arrow-right"></span></a>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -558,22 +509,19 @@
           <div class="col-md-9 navigation-section">
               <div class="row">
                 <div class="col-xs-5 item">
-                  <a href="" class="title-link">What we are doing with internships?</a>
-                  <p>We are taking the lead of giving the students corporate grade internships. Teaching them how to be the Leader of all.</p>
-                  <a href="" class="btn btn-default btn-xs btn-rounded">more <i class="ti-angle-double-right"></i></a>
+                  <a href="" class="title-link">{{$page->sections[0]->title}}</a>
+                  <p>{{$page->sections[0]->summery}}</p>
+                  <a href="{{URL::to('/contents/' . $page->sections[0]->slug )}}" class="btn btn-default btn-xs btn-rounded">more <i class="ti-angle-double-right"></i></a>
                 </div>
                 <div class="col-xs-4 item">
                   <a href="" class="title-link">Recent updates</a>
                   <ul>
+                    @foreach($recent_updates as $update)
                     <li>
-                      <i class="ti-angle-double-right"></i> <a href=""> Hello world this is an upadte.</a>
+                      <i class="ti-angle-double-right"></i> <a href="{{URL::route('news_update.show', $update->slug)}}"> {{$update->title}}</a>
                     </li>
-                    <li>
-                      <i class="ti-angle-double-right"></i><a href=""> Another cool update from CSO.</a>
-                    </li>
-                    <li>
-                      <i class="ti-angle-double-right"></i><a href=""> We have launched an awesome blog</a>
-                    </li>
+                    @endforeach
+
                   </ul>
                   <a href="" class="btn btn-default btn-xs btn-rounded">more <i class="ti-angle-double-right"></i></a>
                 </div>
@@ -581,13 +529,16 @@
                   <a href="" class="title-link">FIND MORE</a>
                   <ul>
                     <li>
-                      <i class="ti-angle-double-right"></i> <a href="">BLOG</a>
+                      <i class="ti-angle-double-right"></i> <a href="">Internships</a>
                     </li>
                     <li>
-                      <i class="ti-angle-double-right"></i><a href=""> SCHEDUELS</a>
+                      <i class="ti-angle-double-right"></i><a href=""> Professional Skill Development</a>
                     </li>
                     <li>
-                      <i class="ti-angle-double-right"></i><a href=""> GALLERIES</a>
+                      <i class="ti-angle-double-right"></i><a href=""> Employers</a>
+                    </li>
+                    <li>
+                      <i class="ti-angle-double-right"></i><a href=""> JOBS</a>
                     </li>
                   </ul>
                 </div>
@@ -598,19 +549,22 @@
 
 
     <div class="row section-b">
-      <h2 data-sr='enter left over .7s'>We are the <span class="important">League of Lengends</span> in your Job Searching </h2>
+      <h2 data-sr='enter left over .7s'>
+        {{$page->body_title}}
+      </h2>
       <div class="section-b-thumb" data-sr='enter bottom wait 0.5s' >
         <div class="icon-holder">
           <i class="flaticon-directional8"></i>
         </div>
         <div class="section-content">
-            <p class="section-title">WE GUIDE THE SUPERMEN</p>
+            <p class="section-title">
+                {{$page->sections[1]->title}}
+            </p>
             <div class="section-description">
               <p>
-                  Whether you need help writing a CV, or
-structuring a cover letter; require a better understanding of the ‘market’, 'corporate structures' or any other (possibly strange sounding) 
+                   {{$page->sections[1]->summery}}
               </p>
-              <a href="" class="btn btn-default btn-sm btn-rounded">HOW WE GUIDE <i class="ti-angle-double-right"></i></a>
+              <a href="{{URL::to('/contents/' . $page->sections[1]->slug)}}" class="btn btn-default btn-sm btn-rounded">Find More <i class="ti-angle-double-right"></i></a>
             </div>
         </div>
       </div>
@@ -619,14 +573,15 @@ structuring a cover letter; require a better understanding of the ‘market’, 
           <i class="flaticon-job3"></i>
         </div>
         <div class="section-content">
-            <p class="section-title">PREPARING YOUR CV</p>
+            <p class="section-title">
+                {{$page->sections[2]->title}}
+            </p>
             <div class="section-description">
               <p>
-                  Whether you need help writing a CV, or
-structuring a cover letter; require a better understanding of the ‘market’, 'corporate structures' or any other (possibly strange sounding) 
+                    {{$page->sections[2]->summery}}
               </p>
 
-              <a href="" class="btn btn-default btn-sm btn-rounded">KNOW MORE <i class="ti-angle-double-right"></i></a>
+              <a href="{{URL::to('/contents/' . $page->sections[2]->slug)}}" class="btn btn-default btn-sm btn-rounded">Find More <i class="ti-angle-double-right"></i></a>
             </div>
         </div>
       </div>
@@ -635,22 +590,22 @@ structuring a cover letter; require a better understanding of the ‘market’, 
           <i class="flaticon-seo10"></i>
         </div>
         <div class="section-content">
-            <p class="section-title">BUILD COMMUNICATION SKILLS</p>
+            <p class="section-title">
+                {{$page->sections[3]->title}}
+            </p>
             <div class="section-description">
               <p>
-                  Whether you need help writing a CV, or
-structuring a cover letter; require a better understanding of the ‘market’, 'corporate structures' or any other (possibly strange sounding) 
+                {{$page->sections[3]->summery}}
               </p>
-              <a href="" class="btn btn-default btn-sm btn-rounded">I AM INTERESTED <i class="ti-angle-double-right"></i></a>
+              <a href="{{URL::to('/contents/' . $page->sections[3]->slug)}}" class="btn btn-default btn-sm btn-rounded">Find More <i class="ti-angle-double-right"></i></a>
             </div>
         </div>
       </div>
     </div>
 
 
-
+    <!--
     <div class="section-b row">
-
       <h2 data-sr='enter up over 2s'>WE HAVE PARTNERED WITH THE LEGENDS </h2>
                 <div class="col-sm-12">
                       <div class="panel b-a">
@@ -755,131 +710,28 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
                         </div>
                       </div>
-
               </div>
-
-
-
     </div>
+
+    -->
 
     <div class="row section-b">
       <h2 data-sr='enter up over 2s'>SOME OF THE ORGANISATIONS WE HAVE PARTNERED WITH </h2>
+
       <div id="owl-demo">
+        @foreach($coolest_orgs as $org)
+            <div class="item"><img width="200px" height="" src="{{URL::to('/files/orgs/' . $org->image)}}" alt="{{$org->initial}}"></div>
+        @endforeach
+        <!--
         <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
-        <div class="item"><img src="http://placehold.it/200x180" alt="Owl Image"></div>
+        -->
       </div>
+
     </div>
 
-
-    <div class="row footer">
-      <div class="row footer-head">
-          <p>SUBSCRIBE US TO GET REGULAR UPDATES</p>
-          <form class="form-inline" role="form">
-              <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-              </div>
-              <a href="#modal-form" class="btn btn-success" data-toggle="modal">Subscribe!</a>
-          </form>
-      </div>
-
-
-      <div class="row footer-body-wrapper">
-          <div class="footer-body">
-
-            <div class="col-md-5" >
-              <h3>Recent Posts</h3>
-              <div class="post-links">
-                <ul>
-                  <li>
-                    <p><i class="ti-angle-double-right"></i> 
-                    <a href="">
-                      The Career Services Office (CSO), BRAC University Launches a Partnership with Voluntary Service Overseas (VSO) Bangladesh
-                    </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                    <i class="ti-angle-double-right"></i> 
-                    <a href="">Career Serfvice office becomes dedicated job 
-                    partner with BDJobs.</a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <i class="ti-angle-double-right"></i>
-                      <a href="">Career Fare in Westin</a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <i class="ti-angle-double-right"></i>
-                      <a href="">Loren ipsum dolor sit amet</a>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-
-            <div class="col-md-4 ">
-              <h3>EVENTS</h3>
-              <div class="post-links">
-                <ul>
-                  <li>
-                    <p>
-                      <a href="">
-                        <i class="ti-angle-double-right"></i> Fall 2015 PSDP Registrations
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="">
-                        <i class="ti-angle-double-right"></i>
-                        Internship Registrations for 2015 Fall Open
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="">
-                        <i class="ti-angle-double-right"></i> PSDP Registration 2014
-                      </a>  
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href=""><i class="ti-angle-double-right"></i> Spring 2014 Registrations</a>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <h3>HOTLINE </h3>
-              <p>
-                  We are always eger to listen from you. Please feel free to contact for any purpose in the following address.
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-mobile" style="font-size:14px"></i> +880 1932 986 985
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-phone" style="font-size:14px"></i> +880 0292121233
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-envelope-o" style="font-size:14px"></i> hello[.]cso.bracu.ac.bd
-              </p>
-            </div>
-          </div>
-      </div>
-    </div>
+    <!--footer-->
+    @include('site.footer')
+    <!--footer-->
 
   </div>
   <!--container--ful-width-->
@@ -887,305 +739,9 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Register as a student</h4>
-      </div>
-      <div class="modal-body">
-
-              <div class="row">
-                <div class="col-sm-12">
-                  <form id="wizardform" method="get" action="">
-                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <ul class="nav nav-tabs font-bold">
-                          <li><a href="#step1" data-toggle="tab">Basic </a></li>
-                          <li><a href="#step2" data-toggle="tab">Academic </a></li>
-                          <li><a href="#step3" data-toggle="tab">Personal</a></li>
-                          <li><a href="#step4" data-toggle="tab">Gurdian </a></li>
-                          <li><a href="#step5" data-toggle="tab">Finish </a></li>
-                        </ul>
-                      </div>
-                      <div class="panel-body">
-                        
-                        <div class="tab-content">
-
-                          <!--basic informations -->
-                          <div class="tab-pane" id="step1">
-                            <div class="row">
-                              <div class="col-xs-12">
-                                <label for="">Your Name : </label>
-                              </div>
-                              <div class="col-xs-6">
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="First Name" id="student_first_name">
-                              </div>
-                              <div class="col-xs-6">
-                                <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Last Name" id="student_last_name">
-                              </div>
-
-                              <div class="col-xs-12">
-                                <div class="form-group">
-                                  <label for="gender">Gender </label>
-                                  <select style="width:260px" name="student_gender" id="student_gender" class="form-control">
-                                    <option value="m">Male</option>
-                                    <option value="f">Female</option>
-                                    <option selected value="o">Other</option>
-                                  </select>
-                                </div>
-                              </div>
-                              
-                              <div class="col-xs-12">
-                                <div class="row">
-                                  <div class="col-xs-12">
-                                    <label for="">Contact Information</label>
-                                    <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Email address" id="student_email" data-type="email">
-                                  </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-6 form-group">
-                                      <br>
-                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Cell Phone" id="student_cell_phone" data-type="number">
-                                    </div>
-                                    <div class="col-xs-6 form-group">
-                                    <br>
-                                      <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="Telephone" id="student_telephone" data-type="number">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-6 form-group">
-                                      <br>
-                                      <input type="password" class="form-control" data-trigger="change" data-required="true" placeholder="Password" id="student_password" >
-                                    </div>
-                                    <div class="col-xs-6 form-group">
-                                    <br>
-                                      <input type="password" class="form-control" data-trigger="change" data-required="true" placeholder="Confirm" id="student_password_confirm" data-equalto="#student_password" >
-                                    </div>
-                                </div>
-
-
-                              </div>
-                            </div>
-                          </div>
-
-
-
-
-                          <!--basic informations -->
-                          <div class="tab-pane" id="step2">
-                            <div class="row">
-                              <div class="col-xs-12">
-                                <p>Your current Student ID:</p>
-                                <input id="student_studentid" type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="Student ID">
-                              </div>
-                              <div class="col-xs-6">
-                                <br>
-                                <input id="student_cgpa" type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="current cgpa" name="current_cgpa">
-                              </div>
-                              <div class="col-xs-6">
-                                <br>
-                                <input id="student_credits_completed" type="text" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="credits completed" name="credits_completed">
-                              </div>
-
-                                <div class="col-xs-12 form-group">
-                                  <label for="department">Department : </label>
-                                  <select class="form-control" name="department" id="student_department">
-                                    @foreach($departments as $department)
-                                        <option value="{{$department->id}}">{{$department->name}}</option>
-                                    @endforeach
-                                  </select>
-                                </div>
-
-                                <div class="col-xs-6 form-group">
-                                  <label for="major">Major : </label>
-                                  <select class="form-control" name="major" id="student_major">
-                                    @foreach($courses as $course)
-                                        <option value="{{$course->id}}">{{$course->name}}</option>
-                                    @endforeach
-                                  </select>
-                                </div>
-
-                                <div class="col-xs-6 form-group">
-                                  <label for="minor">Minor : </label>
-                                  <select class="form-control" name="minor" id="student_minor">
-                                    @foreach($courses as $course)
-                                        <option value="{{$course->id}}">{{$course->name}}</option>
-                                    @endforeach
-                                  </select>
-                                </div>
-
-                                <div class="col-xs-12 form-group">
-                                  <label for="semester">Semester : </label>
-                                  <select class="form-control" name="minor" id="student_semester">
-                                    <option value="s">Second Last</option>
-                                    <option value="l">Last</option>
-                                  </select>
-                                </div>
-                            </div>
-                          </div>
-                          
-                        
-
-
-                          <!-- personal information -->
-                          <div class="tab-pane" id="step3">
-                            <section class="panel panel-default">
-                              <header class="panel-heading">
-                                <span class="h4">Your Present address</span>
-                              </header>
-                              <div class="panel-body">
-                                  <div class="form-group">
-                                    <textarea id="student_present_address" name="present_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
-                                  </div>
-                                  <div class="form-group pull-in clearfix">
-                                    <div class="col-sm-6">
-                                      <input type="text" class="form-control" placeholder="City" data-required="true" name="present_city" id="student_present_city">
-                                    </div>
-                                    <div class="col-sm-6">
-                                      <input type="text" class="form-control" placeholder="Postal Code" data-required="true" name="present_postal_code" id="student_postal_code">
-                                    </div>
-                                  </div>
-                              </div>
-                            </section>
-
-                            <section class="panel panel-default">
-                              <header class="panel-heading">
-                                <span class="h4">Your Permanent address</span>
-                              </header>
-                              <div class="panel-body">
-                                  <div class="form-group">
-                                    <textarea id="student_permanent_address" name="permanent_address" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
-                                  </div>
-                                  <div class="form-group pull-in clearfix">
-                                    <div class="col-sm-6">
-                                      <input id="student_permanent_city" class="form-control" placeholder="City" data-required="true" name="permanent_city">
-                                    </div>
-                                    <div class="col-sm-6">
-                                      <input class="form-control" placeholder="Postal Code" data-required="true" name="permanent_postal_code" id="student_permanent_postal_code">
-                                    </div>
-                                    <br>
-                                  </div>
-                              </div>
-                            </section>
-                            <div class="col-sm-12">
-                              <input type="url" class="form-control" placeholder="Web Url" data-required="true" name="student_web_url" id="student_web_url">
-                            </div>
-                            <br><br>
-                          </div>
-
-
-                          <!-- personal information -->
-                          <div class="tab-pane" id="step4">
-                            
-                            <div class="form-group pull-in clearfix">
-                              <div class="col-sm-12">
-                                <label>Gurdian name</label>
-                                <input type="text" class="form-control" data-required="true" name="gurdian_name" id="student_gurdian_name">
-                              </div>
-                              <div class="col-sm-12">
-                                <label>Relationship with Gurdian</label>
-                                <input  class="form-control" data-required="true" id="student_gurdian_relation">
-                              </div>
-                              <div class="col-sm-12">
-                                <label>Name of the Institute Gurdian works in</label>
-                                <input class="form-control" data-required="true" name="gurdian_work_institute" id="student_gurdian_work_institute">
-                              </div>
-                              <div class="col-sm-12">
-                                <label>Designation of Gurdian in the institute</label>
-                                <input class="form-control" data-required="true" name="gurdian_desig" id="student_gurdian_design">
-                              </div>
-                              <div class="col-sm-12">
-                                <label>Gurdian's Contact number. </label>
-                                <input class="form-control" data-required="true" name="gurdian_contact" id="student_gurdian_contact">
-                              </div>
-                              <div class="col-sm-12">
-                                <label>Gurdian's Email address </label>
-                                <input class="form-control" name="gurdian_email" id="student_gurdian_email">
-                              </div>
-                            </div>
-                          </div>
-                          <!--personal information-->
-
-                          
-                          <!--finish -->
-                            <div class="tab-pane" id="step5">
-                            <div class="form-group pull-in clearfix">
-                              
-                              <div class="col-sm-12">
-                                <label>Tell something about yourself</label>
-                                <textarea id="student_bio" name="student_bio" class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Address"></textarea>
-                              </div>
-
-                              <div class="col-sm-12">
-                                <label>Your Employment status ? </label>
-                                <select style="width:260px" name="gender" id="student_employment_status" class="form-control">
-                                    <option value="employed">Employed</option>
-                                    <option value="unemployed">Unemployed</option>
-                                  </select>
-                              </div>
-                              <div class="col-sm-12">
-                                <br/>
-                               <div class="alert alert-success hidden" id="form-success-message">
-                                <button type="button"  class="close" data-dismiss="alert">×</button>
-                                <i class="fa fa-ok-sign"></i><strong>Thank you for signing up!</strong> Please check your email address for further instructions.
-                              </div>
-
-                                <a id="student-form-submit-button" href="#" class="btn btn-s-md btn-default btn-rounded">Submit</a>
-                              </div>
-                            </div>
-                          </div>
-                          <!--finish -->
-
-                          <ul class="pager wizard m-b-sm">
-                            <li class="previous first" style="display:none;"><a href="#">First</a></li>
-                            <li class="previous"><a href="#">Previous</a></li>
-                            <li class="next last" style="display:none;"><a href="#">Last</a></li>
-                            <li class="next"><a href="#">Next</a></li>
-                          </ul>
-                        </div>
-
-                        <h4>Completed</h4>
-                        <div class="progress progress-xs m-t-md">
-                          <div class="progress-bar bg-success"></div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div> 
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
+    @include('partials.modals.employer_signup')
+    @include('partials.modals.alumni_signup')
+    @include('partials.modals.student_signup')
 
 
 
@@ -1280,90 +836,11 @@ structuring a cover letter; require a better understanding of the ‘market’, 
 
       });
     </script>
-  <script type="text/javascript">
-    
-    $('#myModal').on('hidden.bs.modal', function (event) {
-      $('input').val('');
-      $('textarea').val('');
-      $('#student-form-submit-button').removeClass('btn-default').removeClass('fa fa-check btn-success');
-    });
 
 
-    $('#myModal').on('shown.bs.modal', function (event) {
-
-        $('#wizardform').bootstrapWizard('show',0);
-
-        /**
-        * handle form submit for student.
-        */
-        $('#student-form-submit-button').on('click',function(e) {
-
-
-            if($(this).hasClass('btn-success') || $(this).hasClass('btn-disabled')) {
-              return;
-            }
-
-
-            var student = {};
-            student.token = $('_token').val();
-
-            student.first_name = $('#student_first_name').val();
-            student.last_name = $('#student_last_name').val();
-            student.gender = $('#student_gender option:selected').text();
-            student.email = $('#student_email').val();
-            student.cell_phone = $('#student_cell_phone').val();
-            student.phone_number = $('#student_telephone').val();
-
-            student.student_id = $('#student_studentid').val();
-            student.current_cgpa = $('#student_cgpa').val();
-            student.credits_completed = $('#student_credits_completed').val();
-            student.department_id = $('#student_department option:selected').val();
-            student.major = $('#student_major option:selected').val();
-            student.minor = $('#student_minor option:selected').val();
-            student.semester = $('#student_semester option:selected').val();
-
-
-            student.present_address = $('#student_present_address').val();
-            student.present_city = $('#student_present_city').val();
-            student.present_postal_code = $('#student_postal_code').val();
-            student.permanent_address = $('#student_permanent_address').val();
-            student.permanent_city = $('#student_permanent_city').val();
-            student.permanent_postal_code = $('#student_permanent_postal_code').val();
-            student.web_url = $('#student_web_url').val();
-
-            student.gurdian_name = $('#student_gurdian_name').val();
-            student.gurdian_relation = $('#student_gurdian_relation').val();
-            student.gurdian_work_institute = $('#student_gurdian_work_institute').val();
-            student.gurdian_designation = $('#student_gurdian_design').val();
-            student.gurdian_contact = $('#student_gurdian_contact').val();
-            student.gurdian_email = $('#student_gurdian_email').val();
-
-            student.password = $('#student_password').val();
-
-            student.bio = $('#student_bio').val();
-            student.employment_status = $('#student_employment_status option:selected').val();
-
-            $(this).html('Submitting...');
-            var that = $(this);
-            $(this).addClass('disabled');
-            $.post('/student-register',student, function(response){
-              console.log(response);
-              if(response.status == 'success') {
-                $('#form-success-message').removeClass('hidden').addClass('animated fadeIn');
-                that.removeClass('disabled').removeClass('btn-default').addClass('fa fa-check btn-success').html('Success');
-              } else {
-
-              }
-            });
-
-
-        });
-    });
-
-  </script>
 
   <script src="assets/js/app.js"></script>  
-  <script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="assets/js/slim/jquery.slimscroll.min.js"></script>
   <script src="assets/js/parsley/parsley.min.js"></script>
   <script src="assets/js/wizard/jquery.bootstrap.wizard.js"></script>
   <script src="assets/js/wizard/demo.js"></script>
@@ -1395,10 +872,10 @@ structuring a cover letter; require a better understanding of the ‘market’, 
                 }
             }
         });
-
-
-
       });
   </script>
+
+    <script type="text/javascript" src="{{URL::to('assets/js/signup.js')}}"></script>
+
   </body>
 </html>

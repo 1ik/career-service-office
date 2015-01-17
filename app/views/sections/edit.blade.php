@@ -23,9 +23,7 @@
 
                         <div class="form-group">
                           <label>Section Contents</label>
-                          <textarea name="contents" id="" cols="30" rows="10">
-                            {{$section->contents}}
-                          </textarea>
+                          <textarea class="form-control" name="contents" id="" cols="30" rows="10">{{$section->contents}}</textarea>
                         </div>
                         <div class="form-group">
                           <label>Section Summery</label>

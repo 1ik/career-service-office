@@ -1,4 +1,11 @@
 @extends('admin.layouts.master')
+@section('header')
+
+<link rel="stylesheet" href="{{URL::to('assets/js/datatables/datatables.css')}}" type="text/css"/>
+
+@stop
+
+
 
 @section('content')
 
@@ -8,15 +15,18 @@
 
 
 <div class="m-b-md">
-    <h3 class="m-b-none">Administer Courses and departments</h3>
+    <h3 class="m-b-none">Administer Courses and departments
+    <a class="pull-right btn btn-default btn-sm" href="{{URL::to('admin/users/administrators/create')}}">Add an administrator</a>
+    </h3>
+
 </div>
   <div class="row">
     <div class="col-sm-12">
       <section class="panel panel-default">
         <header class="panel-heading">
-          Administrators
+          <p class="h3">Administrators</p>
         </header>
-        <table class="table table-bordered m-b-none">
+        <table class="table table-bordered m-b-none datatables">
           <thead>
             <tr>
               <th>SL.</th>
@@ -31,7 +41,6 @@
             </tr>
           </thead>
           <tbody>
-
             @foreach($admins as $admin)
             <tr>
               <td>{{$admin->id}}</td>
@@ -59,4 +68,13 @@
 </section>
 
 
+@stop
+
+@section('footer')
+<script src="{{URL::to('assets/js/datatables/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.datatables').DataTable();
+    });
+</script>
 @stop

@@ -3,42 +3,29 @@
 class PsdpRegistrationsController extends \BaseController {
 
 
-    public function __construct(\cso\registrations\PsdpRegistrationRepository $psdpRegis, \cso\registrations\RegistrantRepository $registrants) {
+    public function __construct(\cso\registrations\PsdpRegistrationRepository $psdpRegis,
+                                \cso\registrations\RegistrantRepository $registrants,
+                                \cso\registrations\RegistrationRepository $registrations)
+    {
         $this->psdpRegistrations = $psdpRegis;
         $this->registrants = $registrants;
-        $this->beforeFilter('adminOnly');
+        $this->registrations = $registrations;
+
+        $this->beforeFilter('adminOnly', ['except' => 'enroll']);
+        $this->beforeFilter('canApplyForRegistration', ['only' => 'enroll']);
     }
 
-
-	/**
-	 * Display a listing of the resource.
-	 * GET /psdpregistrations
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
         $psdps = $this->psdpRegistrations->all();
 		return View::make('psdp_registrations.index', compact('psdps'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /psdpregistrations/create
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		//
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /psdpregistrations
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 		if($this->psdpRegistrations->store()) {
@@ -48,43 +35,16 @@ class PsdpRegistrationsController extends \BaseController {
         }
 	}
 
-	/**
-	 * Display the specified resource.
-	 * GET /psdpregistrations/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function show($id)
 	{
 		//
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /psdpregistrations/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function edit($id)
 	{
 		//
 	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /psdpregistrations/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
+    /**
 	 * Remove the specified resource from storage.
 	 * DELETE /psdpregistrations/{id}
 	 *
@@ -96,16 +56,49 @@ class PsdpRegistrationsController extends \BaseController {
 		//
 	}
 
+    public function update($id)
+    {
+        //
+    }
 
     public function addRegistrants()
     {
         return Input::all();
     }
 
-
     public function getRegistrants($psdpRegistrationId) {
-        return $psdp_registration =  $this->psdpRegistrations->find($psdpRegistrationId);
-        return View::make('registrants.psdp_registrants.index', compact('psdp_registration', 'registration'));
+        $psdp_registration =  $this->psdpRegistrations->find($psdpRegistrationId);
+        return View::make('registrants.psdp_registrants.index', compact('psdp_registration'));
+    }
+
+    //enroll the logged in user to psdp registration.
+    public function enroll() {
+        $user = Sentry::getUser();
+
+        //try to enroll this guy
+        if($this->psdpRegistrations->enroll($user)) {
+            return Response::json(['success']);
+        } else {
+            return Response::json(['fail']);
+        }
+    }
+
+    public function exportRegistrants($psdp_id)
+    {
+        return $this->psdpRegistrations->exportRegistrants($psdp_id);
+    }
+
+    public function closeRegistration($psdp_id)
+    {
+        $psdpRegistration = $this->psdpRegistrations->find($psdp_id);
+        $this->registrations->close($psdpRegistration->registration_id);
+        return Redirect::back();
+    }
+
+    public function makeCompleted($psdp_id)
+    {
+        $this->psdpRegistrations->changeStatus($psdp_id, 'completed');
+        return Redirect::back();
     }
 
 }

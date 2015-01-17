@@ -37,7 +37,7 @@ class DepartmentsController extends \BaseController {
 	public function store()
 	{
         if($this->departments->store()) {
-            return Redirect::route('courses.index');
+            return Redirect::route('courses.index'); // department's list is shown in the course's index page.
         } else {
             return Redirect::back()->withInputs();
         }

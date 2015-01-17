@@ -1,6 +1,8 @@
 @extends('admin.layouts.master')
 
 @section('header')
+<link rel="stylesheet" href="<?php echo URL::to("");?>/assets/themify-icons/themify-icons.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo URL::to("");?>/assets/icons/student_icons/icons.css" type="text/css" />
 <style type="text/css">
 
     .section-a {
@@ -9,6 +11,10 @@
     .section-a h4 {
         font-size: 25px;
         font-weight: 200;
+    }
+
+    .scrollable {
+        padding-bottom: 100px;
     }
 
     .panel-heading p {
@@ -58,6 +64,36 @@
 </style>
 @stop
 
+
+@section('action_bar')
+
+@if($user->activated == 0)
+<li class="hidden-xs">
+  <a href="{{URL::to('activate-user/' . $user->id . '/' . $user->activation_code)}}">
+    <i style="font-weight: 800; color:green" class="ti-check"></i>
+  </a>
+</li>
+@endif
+
+
+
+<li class="hidden-xs">
+  <a href="{{URL::route('users.profile.edit', $user->id)}}">
+    <i style="font-weight: 800; color:green" class="ti-pencil"></i>
+  </a>
+</li>
+
+<li class="hidden-xs">
+  <a style="font-weight: 800; color:green" href="{{URL::route('users.applications', $user->id)}}"><i class="fa fa-inbox"></i></a>
+</li>
+
+
+
+
+@stop
+
+
+
 @section('content')
 <section id="content">
   <section class="hbox stretch">
@@ -65,7 +101,7 @@
     <aside class="aside-lg bg-white b-r" id="aside">
       <div class="wrapper section-a">
         <h4 class="m-t-none">{{$user->first_name}} {{$user->last_name}}</h4>
-        <img style="text-align: center" class="" src="{{URL::to("")}}/assets/images/mathew.jpg" alt=""/>
+        <img style="text-align: center" class="" src="{{URL::to("files/users/pp/" . $user->profile_image)}}" alt=""/>
 
         <div class="user-info">
             <p id="bio">{{$user->student->bio}}</p>
@@ -77,7 +113,9 @@
             <p class="location-marker"><i style="font-size: 35px; margin-top: 10px" class="fa fa-map-marker"></i></p>
             <p id="present-address">{{$user->student->present_address}}</p>
             <p id="present-city">{{$user->student->present_city}}, {{$user->student->present_postal_code}}</p>
-
+            <p>
+                <a target="_blank" href="{{URL::to('files/users/cv/' . $user->cv)}}"><i style="font-size: 30px" class="flaticon-cv"></i></a>
+            </p>
         </div>
       </div>
     </aside>
@@ -86,9 +124,7 @@
     <aside>
       <section class="vbox">
         <section class="scrollable wrapper">
-
             <div class="row padder">
-
                 <section class="panel panel-default portlet-item">
                     <header class="panel-heading">
                       <p>Academic Information</p>
@@ -134,7 +170,7 @@
                             {{$user->first_name}} {{$user->last_name}}
                           </p>
                           <br/>
-                          <small class="block">Gender : <b>{{$user->gender}}</b></small>
+                          <small class="block">Gender : <b>{{$user->gender == 'm' ? "Male" : "Female"}}</b></small>
                           <small class="block">Phone : <b>{{$user->phone_number}}</b></small>
                         </div>
                       </article>
@@ -171,6 +207,41 @@
                        </article>
                      </section>
                   </section>
+            </div>
+
+
+
+
+
+            <div class="row padder addresses">
+                <section class="panel panel-default portlet-item col-xs-12" style="padding:0">
+                    <header class="panel-heading">
+                      <p>Gurdian's information</p>
+                    </header>
+                    <section class="panel-body">
+                      <article class="media">
+                        <div class="media-body">
+                            <p class="h6">Name : <b>{{$user->student->gurdian_name}}</b></p>
+                            <p class="h6">
+                                Relationship : <b>{{$user->student->gurdian_relation}}</b>
+                            </p>
+                            <p>
+                                Institute Gurdian works in : <b>{{$user->student->gurdian_work_institute}}</b>
+                            </p>
+                            <p>
+                                Designation in the institute : <b>{{$user->student->gurdian_designation}}</b>
+                            </p>
+                            <p>
+                                Gurdian's contact : <b>{{$user->student->gurdian_contact}}</b>
+                            </p>
+                            <p>
+                                Gurdian's contact : <b>{{$user->student->gurdian_contact}}</b>
+                            </p>
+                        </div>
+                      </article>
+                    </section>
+                 </section>
+
             </div>
 
 

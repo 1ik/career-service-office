@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/font.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/app.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/themify-icons/themify-icons.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/thumbnails-icons/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/icons/org_icons/icons.css" />
 
     <link rel="stylesheet" type="text/css" href="/assets/plugins/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" type="text/css" href="/assets/plugins/owl-carousel/owl.theme.css" />
@@ -464,7 +464,7 @@
       }
 
 
-
+      
       .navbar.sticky {
           position: fixed;
           z-index : 99999999;
@@ -710,7 +710,7 @@
 
         <div class="row cross-sections">
             <div class="col-xs-3 br">
-                <i class="flaticon-directional8"></i>
+                <i class="flaticon-opposite5"></i>
                 <p class="title">{{$page->sections[0]->title}}</p>
                 <p class="description">
                     {{$page->sections[0]->summery}}
@@ -718,7 +718,7 @@
                 <a href="" class="btn btn-xs btn-default">Read more</a>
             </div>
             <div class="col-xs-3 br">
-                <i class="flaticon-directional8"></i>
+                <i class="flaticon-media21"></i>
                 <p class="title">
                     {{$page->sections[1]->title}}
                 </p>
@@ -728,7 +728,7 @@
                 <a href="" class="btn btn-xs btn-default">Read more</a>
             </div>
             <div class="col-xs-3 br">
-                <i class="flaticon-directional8"></i>
+                <i class="flaticon-bookmark44"></i>
                 <p class="title">{{$page->sections[2]->title}}</p>
                 <p class="description">
                     {{$page->sections[2]->summery}}
@@ -736,7 +736,7 @@
                 <a href="" class="btn btn-xs btn-default">Read more</a>
             </div>
             <div class="col-xs-3">
-                <i class="flaticon-directional8"></i>
+                <i class="flaticon-online5"></i>
                 <p class="title">{{$page->sections[3]->title}}</p>
                 <p class="description">
                     {{$page->sections[3]->summery}}

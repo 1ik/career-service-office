@@ -2,4 +2,5 @@
 
 class Course extends \Eloquent {
 	protected $fillable = ['name'];
+    
 }

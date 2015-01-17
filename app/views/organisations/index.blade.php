@@ -7,7 +7,10 @@
 
 
 <div class="m-b-md">
-    <h3 class="m-b-none">Administer Organisations and OrganisationTypes</h3>
+    <h3 class="m-b-none">Administer Organisations and OrganisationTypes
+        <a class="pull-right btn btn-default btn-sm" href="{{URL::route('organisations.create')}}">Add Organisation</a>
+
+    </h3>
 </div>
   <div class="row">
     <div class="col-sm-12 col-md-9">
@@ -38,31 +41,6 @@
               <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-pencil"></i></a> </td>
             </tr>
             @endforeach
-            <tr>
-                {{ Form::open(['url' => URL::route('organisations.store')])}}
-
-                <td colspan="2">
-                   <input type="text" name="name" placeholder="Name" class="form-control"/>
-                </td>
-                <td>
-                    <input type="text" name="initial" placeholder="Initial" class="form-control"/>
-                </td>
-                <td>
-                    <input type="text" name="url" placeholder="URL" class="form-control"/>
-                </td>
-                <td>
-                    <select name="organisation_type_id" class="form-control" id="">
-                        @foreach($organisationTypes as $type)
-                            <option value="{{$type->id}}">{{$type->name}}</option>
-                        @endforeach
-                    </select>
-                </td>
-
-                <td>
-                    <input type="submit" class="btn btn-sm btn-default"/>
-                </td>
-                {{ Form::close(); }}
-            </tr>
           </tbody>
         </table>
       </section>

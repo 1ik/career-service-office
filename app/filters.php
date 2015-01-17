@@ -35,15 +35,14 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest())
-	{
-		if (Request::ajax())
-		{
-			return Response::make('Unauthorized', 401);
-		}
-		return Redirect::guest('login');
-	}
+	$user = Sentry::getUser();
+    if(! $user)
+        App::abort(404);
 });
+
+
+
+
 
 
 Route::filter('auth.basic', function()
@@ -98,15 +97,7 @@ Route::filter('adminOnly', function($route,$request){
     if( !$loggedInUser || ! $loggedInUser->inGroup($adminGroup) ) {
         App::abort(404);
     }
-
 });
-
-
-
-
-
-
-
 
 
 
@@ -114,16 +105,98 @@ Route::filter('canViewProfile', function($route, $request){
 
     $loggedInUser = Sentry::getUser();
 
+    if($loggedInUser == NULL) {
+        App::abort(404);
+    }
+
     try {
         $user = Sentry::findUserById($route->getParameter('id'));
     } catch(\Cartalyst\Sentry\Users\UserNotFoundException $e) {
         App::abort(404);
     }
 
-    if($loggedInUser->id != $route->getParameter('id') ) {
+
+    if(! ($loggedInUser->id == $route->getParameter('id') || \cso\utils\UserUtil::isAdmin()) ) {
         App::abort(404);
     }
 
+});
+
+
+
+Route::filter('canViewJob', function($route, $request) {
+
+    $job = Job::find($route->getParameter('jobs'));
+
+    if($job == null) {
+        App::abort(404);
+    }
+
+    if(\cso\utils\UserUtil::isAdmin()) {
+        return;
+    }
+
+    if($job->approver_id == -1)
+    {
+        App::abort(404);
+    }
+
+    if(\cso\utils\UserUtil::isEmployer())
+    {
+        $u = Sentry::getUser();
+
+        if( $job->poster_id != $u->id )
+        {
+            App::abort(404);
+        }
+        else{
+            return;
+        }
+    }
+
+    if(\cso\utils\UserUtil::isStudent() || \cso\utils\UserUtil::isAlumni())
+    {
+
+    }
+    else{
+        App::abort(404);
+    }
+
+});
+
+
+
+
+Route::filter('canEditJob', function($route, $request) {
+
+    $job = Job::find($route->getParameter('jobs'));
+
+    if($job == null) {
+        App::abort(404);
+    }
+
+    if(\cso\utils\UserUtil::isAdmin()) {
+        return;
+    }
+
+    if($job->approver_id == -1)
+    {
+        App::abort(404);
+    }
+
+    if(\cso\utils\UserUtil::isEmployer())
+    {
+        $u = Sentry::getUser();
+
+        if( $job->poster_id != $u->id )
+        {
+            App::abort(404);
+        }
+        else{
+            return;
+        }
+    }
+    App::abort(404);
 
 });
 
@@ -136,7 +209,48 @@ Route::filter('canViewProfile', function($route, $request){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::filter('canApplyForRegistration', function($route, $request){
+
+    $admin = \cso\utils\UserUtil::isAdmin();
+    $student = \cso\utils\UserUtil::isStudent();
+
+    if(!$admin && !$student)
+    {
+        App::abort(404);
+    }
+});
+
+
+
+
 Route::filter('correctNameInTheURL', function($route, $request) {
+
+
+
+
 
     try {
         $user = Sentry::findUserById($route->getParameter('id'));
@@ -146,8 +260,10 @@ Route::filter('correctNameInTheURL', function($route, $request) {
 
     $name = $user->first_name . " " . $user->last_name;
     $name = implode(explode(" ", $name), "-");
+
     if($name != $route->getParameter('name')){
         return Redirect::route($route->getName(), ['id' => $user->id, 'name' => $name]);
     }
+
 });
 

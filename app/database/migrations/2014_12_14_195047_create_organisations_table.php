@@ -19,11 +19,10 @@ class CreateOrganisationsTable extends Migration {
             $table->string('initial');
             $table->string('url');
             $table->integer('organisation_type_id')->unsigned();
+            $table->string('image');
+            $table->boolean('cool');
 			$table->timestamps();
-
             $table->foreign('organisation_type_id')->references('id')->on('organisation_types')->onDelete('cascade')->onUpdate('cascade');
-
-
 		});
 	}
 

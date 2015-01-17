@@ -18,4 +18,10 @@ class RegistrantRepository extends Repository {
     function __construct() {
         parent::__construct(new Registrant);
     }
+
+    public function findRegistrant($registrationId, $userId)
+    {
+        return Registrant::whereUserId($userId)->whereRegistrationId($registrationId)->get()->first();
+    }
+
 }

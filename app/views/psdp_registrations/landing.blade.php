@@ -482,8 +482,6 @@
 
 
 
-
-
   <div class="container-full-width section-a">
     <div class="left-navigation">
       <a href="" id="signup-link">Sign up</a> | <a id="login-link" href="/sign-in">Log in</a>
@@ -531,6 +529,17 @@
                 </p>
             <br><br>
             <a class="animated fadeInUp" href="">Explore <span class="ti-arrow-right"></span></a>
+            <?php
+                $reg = App::make('\cso\registrations\PsdpRegistrationRepository');
+                $open = $reg->getOpenPsdpRegistration();
+            ?>
+            <?php if($open) : ?>
+                @if(!Sentry::check())
+                    <a class="animated fadeInUp" href="{{URL::to('sign-in')}}">Sign in to enroll for {{$open->semester}}, {{$open->year}} <span class="ti-arrow-right"></span></a>
+                @elseif (\cso\utils\UserUtil::isStudent())
+                    <a class="animated fadeInUp" href="" id="enroll-student-link" data-user-id="{{Sentry::getUser()->id}}">Enroll me for for {{$open->semester}}, {{$open->year}} <span class="ti-arrow-right"></span></a>
+                @endif
+            <?php endif ?>
           </div>
         </div>
 
@@ -1078,12 +1087,6 @@
 </div>
 
 
-
-
-
-
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -1175,7 +1178,6 @@
         */
         $('#student-form-submit-button').on('click',function(e) {
 
-
             if($(this).hasClass('btn-success') || $(this).hasClass('btn-disabled')) {
               return;
             }
@@ -1254,6 +1256,8 @@
 
 
 <script type="text/javascript">
+
+
     $(document).ready(function(){
         var winHeight = $(window).height();
         $(window).scroll(function(){
@@ -1272,5 +1276,21 @@
 
 
 
+    <script type="text/javascript">
+        $(function(){
+            $('#enroll-student-link').on('click', function(){
+
+                var user_id = ($(this).attr('data-user-id'));
+                $.get('/psdp_registrations/100/enroll',function(response){
+                    if(response[0] == 'success') {
+                        alert ("You have have been registered successfully");
+                    } else {
+                        alert ("You are already registered or Registration failed");
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
   </body>
 </html>

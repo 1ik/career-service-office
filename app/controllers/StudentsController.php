@@ -2,89 +2,49 @@
 
 class StudentsController extends \BaseController {
 
-    public function __construct(\cso\students\StudentRepository $students) {
+    public function __construct(\cso\students\StudentRepository $students,
+                                \cso\departments\DepartmentRepository $depts,
+                                \cso\courses\CourseRepository $courses) {
         $this->students = $students;
+        $this->depts = $depts;
+        $this->courses = $courses;
     }
 
-
-	/**
-	 * Display a listing of the resource.
-	 * GET /students
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
-
         $students = $this->students->all();
         return View::make('students.index', compact('students'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /students/create
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		//
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /students
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 		//
 	}
-	/**
-	 * Display the specified resource.
-	 * GET /students/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
 	public function show($id,$name)
 	{
         $user = $this->students->find($id);
         return View::make('students.show', compact('user'));
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /students/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function edit($id)
 	{
-		//
+		$user = $this->students->find($id);
+        $departments = $this->depts->all();
+        $courses = $this->courses->all();
+        return View::make('students.edit', compact('user', 'departments', 'courses'));
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /students/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function update($id)
 	{
 		//
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /students/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function destroy($id)
 	{
 		//

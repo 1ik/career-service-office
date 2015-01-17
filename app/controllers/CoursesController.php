@@ -3,12 +3,11 @@
 class CoursesController extends \BaseController {
 
 
-    public function __construct(\cso\courses\CourseRepository $courses, \cso\departments\DepartmentRepository $departments) {
+    public function __construct(\cso\courses\CourseRepository $courses,
+                                \cso\departments\DepartmentRepository $departments) {
         $this->courses = $courses;
         $this->departments = $departments;
-
         $this->beforeFilter('adminOnly');
-
     }
 	/**
 	 * Display a listing of the resource.

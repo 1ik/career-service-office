@@ -14,6 +14,4 @@ abstract class Registration {
     public function __construct(RegistrationRepository $registrationRepository) {
         $this->registrationRepository = $registrationRepository;
     }
-
-
-} 
+}

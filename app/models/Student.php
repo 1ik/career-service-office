@@ -27,18 +27,24 @@ class Student extends \Eloquent {
         'user_id'
     ];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo('User');
     }
 
-    public function department() {
+    public function department()
+    {
         return $this->belongsTo('Department');
     }
 
-    public function majorCourse() {
+    public function majorCourse()
+    {
         return $this->belongsTo('Course', 'major');
     }
-    public function minorCourse() {
+
+    public function minorCourse()
+    {
         return $this->belongsTo('Course', 'minor');
     }
+
 }

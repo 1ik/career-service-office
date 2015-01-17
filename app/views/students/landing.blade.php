@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/font.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/css/app.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/themify-icons/themify-icons.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/thumbnails-icons/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/icons/student_icons/icons.css" />
 
     <link rel="stylesheet" type="text/css" href="/assets/plugins/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" type="text/css" href="/assets/plugins/owl-carousel/owl.theme.css" />
@@ -669,7 +669,7 @@
         <div class="row section-d">
             <div class="left-section">
                 <p class="title" data-sr='enter left wait .4s' >{{$page->sections[0]->title}}</p>
-                <i class="flaticon-directional8" data-sr='enter up .4s'></i>
+                <i class="flaticon-businessman30" data-sr='enter up .4s'></i>
                 <p class="description" data-sr='enter up wait .4s'>
                     {{$page->sections[0]->summery}}
                 </p>
@@ -679,11 +679,11 @@
             </div>
             <div class="right-section">
                 <p class="title" data-sr='enter right wait .4s' >{{$page->sections[1]->title}}</p>
-                <i class="flaticon-directional8" data-sr='enter up .4s'></i>
+                <i class="flaticon-cv" data-sr='enter up .4s'></i>
                 <p class="description" data-sr='enter up wait .4s'>
                     {{$page->sections[1]->summery}}
                 </p>
-                <a class="btn btn-default btn-rounded" href="" data-sr='enter bottom wait .4s' href="{{URL::to('/contents/' . $page->sections[1]->slug)}}">
+                <a class="btn btn-default btn-rounded" href="{{URL::to('/contents/' . $page->sections[1]->slug)}}" data-sr='enter bottom wait .4s'>
                     Know More <i class="ti-angle-double-right" style="font-size: 10px"></i>
                 </a>
             </div>
@@ -691,42 +691,42 @@
 
         <div class="row section-e">
             <div class="" style="margin:0 auto; width:80%">
-                    <div class="carousel slide auto panel-body" id="c-slide">
-                        <ol class="carousel-indicators out">
-                          <li data-target="#c-slide" data-slide-to="0" class="active"></li>
-                          <li data-target="#c-slide" data-slide-to="1" class=""></li>
-                          <li data-target="#c-slide" data-slide-to="2" class=""></li>
-                        </ol>
-                        <div class="carousel-inner">
-                          <div class="item active">
-                            <p class="text-center">
-                              <em class="h4 text-mute">{{$page->sections[2]->title}}</em><br>
-                              <small class="text-muted">{{$page->sections[2]->summery}}</small><br/>
-                              <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[2]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
-                            </p>
-                          </div>
-                          <div class="item">
-                            <p class="text-center">
-                              <em class="h4 text-mute">{{$page->sections[3]->title}}</em><br>
-                              <small class="text-muted">{{$page->sections[3]->summery}}</small><br/>
-                              <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[3]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
-                            </p>
-                          </div>
-                          <div class="item">
-                            <p class="text-center">
-                              <em class="h4 text-mute">{{$page->sections[4]->title}}</em><br>
-                              <small class="text-muted">{{$page->sections[4]->summery}}</small><br/>
-                              <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[4]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
-                            </p>
-                          </div>
-                        </div>
-                        <a class="left carousel-control" href="#c-slide" data-slide="prev">
-                          <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="right carousel-control" href="#c-slide" data-slide="next">
-                          <i class="fa fa-angle-right"></i>
-                        </a>
+                <div class="carousel slide auto panel-body" id="c-slide">
+                    <ol class="carousel-indicators out">
+                      <li data-target="#c-slide" data-slide-to="0" class="active"></li>
+                      <li data-target="#c-slide" data-slide-to="1" class=""></li>
+                      <li data-target="#c-slide" data-slide-to="2" class=""></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <p class="text-center">
+                          <em class="h4 text-mute">{{$page->sections[2]->title}}</em><br>
+                          <small class="text-muted">{{$page->sections[2]->summery}}</small><br/>
+                          <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[2]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
+                        </p>
+                      </div>
+                      <div class="item">
+                        <p class="text-center">
+                          <em class="h4 text-mute">{{$page->sections[3]->title}}</em><br>
+                          <small class="text-muted">{{$page->sections[3]->summery}}</small><br/>
+                          <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[3]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
+                        </p>
+                      </div>
+                      <div class="item">
+                        <p class="text-center">
+                          <em class="h4 text-mu/te">{{$page->sections[4]->title}}</em><br>
+                          <small class="text-muted">{{$page->sections[4]->summery}}</small><br/>
+                          <a class="btn btn-default btn-xs btn-rounded" href="{{URL::to('/contents/' . $page->sections[4]->slug)}}">More <i class="ti-angle-double-right" style="font-size: 10px"></i></a>
+                        </p>
+                      </div>
                     </div>
+                    <a class="left carousel-control" href="#c-slide" data-slide="prev">
+                      <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="right carousel-control" href="#c-slide" data-slide="next">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

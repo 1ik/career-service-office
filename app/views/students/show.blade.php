@@ -1,5 +1,6 @@
 @extends('admin.layouts.master')
 
+
 @section('header')
 <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/themify-icons/themify-icons.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo URL::to("");?>/assets/icons/student_icons/icons.css" type="text/css" />
@@ -74,7 +75,6 @@
   </a>
 </li>
 @endif
-
 
 
 <li class="hidden-xs">

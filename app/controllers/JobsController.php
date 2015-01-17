@@ -31,6 +31,7 @@ class JobsController extends \BaseController {
         }, array('only' => 'create', 'store'));
     }
 
+
 	public function index()
 	{
         if(\cso\utils\UserUtil::isAdmin()) {

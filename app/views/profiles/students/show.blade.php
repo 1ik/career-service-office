@@ -1,3 +1,1 @@
-@extends('students.layouts.master')
-
-@stop
+not implemented.

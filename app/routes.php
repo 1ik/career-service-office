@@ -16,20 +16,6 @@ Route::post('/student-register', 'AuthController@postStudentRegistration');
 Route::post('/employer-register', 'AuthController@postEmployerRegistration');
 Route::post('/alumni-register', 'AuthController@postAlumniRegistration');
 
-
-/*--------------------------------------------------------------------------
-| Routes for landing pages.
---------------------------------------------------------------------------*/
-Route::get('/{slug?}', ['uses' => 'PagesController@show']);
-
-
-/*--------------------------------------------------------------------------
-| Routes for Page's sections
---------------------------------------------------------------------------*/
-Route::resource('sections', 'SectionsController'); //handles the sections.update route.
-Route::get('contents/{slug}', ['uses' => 'SectionsController@show']);
-
-
 /*--------------------------------------------------------------------------
 | Routes for administering Page's sections
 --------------------------------------------------------------------------*/
@@ -38,7 +24,6 @@ Route::group(array('prefix' => 'pages','before' => 'adminOnly'), function() {
     Route::get('/edit/{id}', ['uses' => 'PagesController@edit']);
     Route::post('/update/{id}', ['uses' => 'PagesController@update']);
 });
-
 
 /*--------------------------------------------------------------------------
 | User administration for admin's only
@@ -158,3 +143,16 @@ App::missing(function($exception)
 {
     return Response::view('errors.missing', array(), 404);
 });
+
+
+/*--------------------------------------------------------------------------
+| Routes for landing pages.
+--------------------------------------------------------------------------*/
+Route::get('/{slug?}', ['uses' => 'PagesController@show']);
+
+
+/*--------------------------------------------------------------------------
+| Routes for Page's sections
+--------------------------------------------------------------------------*/
+Route::resource('sections', 'SectionsController'); //handles the sections.update route.
+Route::get('contents/{slug}', ['uses' => 'SectionsController@show']);

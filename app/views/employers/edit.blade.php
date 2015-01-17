@@ -85,11 +85,14 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <label for="first_name">Organisation : </label>
-                                        <select name="organisation_id" id="" class="form-control">
+                                        <select @if(! \cso\utils\UserUtil::isAdmin()) disabled @endif name="organisation_id" id="" class="form-control">
                                             @foreach($organisations as $org)
                                                 <option @if($org->id == $employer->organisation_id) selected @endif value="{{$org->id}}">{{$org->name}}</option>
                                             @endforeach
                                         </select>
+                                        @if( ! \cso\utils\UserUtil::isAdmin())
+                                        <label for="">Please contact administrators to change your organisation.</label>
+                                        @endif
                                     </div>
                                 </div>
 

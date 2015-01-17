@@ -14,6 +14,13 @@
 </li>
 @endif
 
+<li class="hidden-xs">
+  <a href="{{URL::route('users.profile.edit', $alumni->user->id)}}">
+    <i style="font-weight: 800; color:green" class="ti-pencil"></i>
+  </a>
+</li>
+
+
 @stop
 
 @section('content')

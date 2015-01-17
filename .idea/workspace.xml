@@ -2,158 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1835d653-10da-41ec-a35a-56961549aaee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/ajax_loader" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/alumni_icons/flaticon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/org_icons/flaticon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/student_icons/flaticon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/user-icons/flaticon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/alumni_icons/flaticon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/org_icons/flaticon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/student_icons/flaticon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/user-icons/flaticon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/alumni_icons/flaticon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/org_icons/flaticon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/student_icons/flaticon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/user-icons/flaticon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/orgs/org_BLink.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/orgs/org_GP.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/orgs/org_UCBL.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2015_01_05_061644_create_failed_jobs_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2015_01_05_092933_create_saved_jobs_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/2015_01_06_090414_create_employers_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/admin/AdminRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/alumni/AlumniRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Employer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/employers/EmployerRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/EmployersController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/EmployersTableSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/registrations/jobs/JobRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/news_updates/NewsUpdateRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/SavedJob.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/SavedJobsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Throttle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/users/UserRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/users/UserUtil.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/modals/alumni_signup.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/users/admins/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/employers/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/saved_jobs/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/employers/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/saved_jobs/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/email_confirm.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/modals/employer_signup.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/event_handlers/event_handlers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/user-icons/flaticon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/alumni_icons/flaticon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/org_icons/flaticon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/student_icons/flaticon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/user-icons/flaticon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/alumni_icons/flaticon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/org_icons/flaticon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/student_icons/flaticon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/user-icons/flaticon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/site/footer.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/alumni_icons/icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/org_icons/icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icons/student_icons/icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/employers/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/saved_jobs/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/event_handlers/jobs-event-handlers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/alumnies/navigation.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/employers/navigation.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/navigation.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/jobs/new_job_post.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/notify_registration.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/password_changed.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/registration_rejected.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/jobs/saved.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/modals/send_mail.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/employers/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/saved_jobs/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/signup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/modals/student_signup.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/user-management.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/user_activated.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cso/event_handlers/users-event-handlers.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/icons/internship_icons.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/csoicon.png" afterPath="$PROJECT_DIR$/public/assets/images/csoicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/psdp_program.jpg" afterPath="$PROJECT_DIR$/public/assets/images/psdp_program.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_12_14_195047_create_organisations_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_12_14_195047_create_organisations_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_12_14_195147_create_jobs_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_12_14_195147_create_jobs_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_12_22_134912_create_pages_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_12_22_134912_create_pages_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_12_23_073229_create_sections_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_12_23_073229_create_sections_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AuthController.php" afterPath="$PROJECT_DIR$/app/controllers/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Course.php" afterPath="$PROJECT_DIR$/app/models/Course.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/courses/CourseRepository.php" afterPath="$PROJECT_DIR$/app/cso/courses/CourseRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/pages/CourseRepository.php" afterPath="$PROJECT_DIR$/app/cso/pages/CourseRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CoursesController.php" afterPath="$PROJECT_DIR$/app/controllers/CoursesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/departments/DepartmentRepository.php" afterPath="$PROJECT_DIR$/app/cso/departments/DepartmentRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/DepartmentsController.php" afterPath="$PROJECT_DIR$/app/controllers/DepartmentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Job.php" afterPath="$PROJECT_DIR$/app/models/Job.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/JobsController.php" afterPath="$PROJECT_DIR$/app/controllers/JobsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Organisation.php" afterPath="$PROJECT_DIR$/app/models/Organisation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/organisations/OrganisationRepository.php" afterPath="$PROJECT_DIR$/app/cso/organisations/OrganisationRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/organisations/OrganisationTypeRepository.php" afterPath="$PROJECT_DIR$/app/cso/organisations/OrganisationTypeRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/OrganisationsController.php" afterPath="$PROJECT_DIR$/app/controllers/OrganisationsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/PsdpRegistration.php" afterPath="$PROJECT_DIR$/app/models/PsdpRegistration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/registrations/psdp/PsdpRegistrationRepository.php" afterPath="$PROJECT_DIR$/app/cso/registrations/psdp/PsdpRegistrationRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" afterPath="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Registrant.php" afterPath="$PROJECT_DIR$/app/models/Registrant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/registrations/registrants/RegistrantRepository.php" afterPath="$PROJECT_DIR$/app/cso/registrations/registrants/RegistrantRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/registrations/Registration.php" afterPath="$PROJECT_DIR$/app/cso/registrations/Registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Registration.php" afterPath="$PROJECT_DIR$/app/models/Registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/registrations/RegistrationRepository.php" afterPath="$PROJECT_DIR$/app/cso/registrations/RegistrationRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Section.php" afterPath="$PROJECT_DIR$/app/models/Section.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SectionsController.php" afterPath="$PROJECT_DIR$/app/controllers/SectionsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/pages/SectionsRepository.php" afterPath="$PROJECT_DIR$/app/cso/pages/SectionsRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Student.php" afterPath="$PROJECT_DIR$/app/models/Student.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/users/StudentRepository.php" afterPath="$PROJECT_DIR$/app/cso/users/StudentRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/StudentsController.php" afterPath="$PROJECT_DIR$/app/controllers/StudentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cso/services/UserServices.php" afterPath="$PROJECT_DIR$/app/cso/services/UserServices.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/app.css" afterPath="$PROJECT_DIR$/public/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/cache.php" afterPath="$PROJECT_DIR$/app/config/cache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs/create.blade.php" afterPath="$PROJECT_DIR$/app/views/jobs/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organisation_types/create.blade.php" afterPath="$PROJECT_DIR$/app/views/organisation_types/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organisations/create.blade.php" afterPath="$PROJECT_DIR$/app/views/organisations/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/datatables/demo.js" afterPath="$PROJECT_DIR$/public/assets/js/datatables/demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/jobs/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/sections/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/students/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="$PROJECT_DIR$/app/filters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/index-new.blade.php" afterPath="$PROJECT_DIR$/app/views/site/index-new.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/users/admins/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/users/admins/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs/index.blade.php" afterPath="$PROJECT_DIR$/app/views/jobs/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organisations/index.blade.php" afterPath="$PROJECT_DIR$/app/views/organisations/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/psdp_registrations/index.blade.php" afterPath="$PROJECT_DIR$/app/views/psdp_registrations/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/registrants/index.blade.php" afterPath="$PROJECT_DIR$/app/views/registrants/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/registrants/psdp_registrants/index.blade.php" afterPath="$PROJECT_DIR$/app/views/registrants/psdp_registrants/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/index.blade.php" afterPath="$PROJECT_DIR$/app/views/students/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/alumnies/landing.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/organisations/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/organisations/landing.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/psdp_registrations/landing.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/landing.blade.php" afterPath="$PROJECT_DIR$/app/views/students/landing.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/local.php" afterPath="$PROJECT_DIR$/app/start/local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/mail.php" afterPath="$PROJECT_DIR$/app/config/mail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/layouts/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/layouts/navigation.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/layouts/navigation.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/navigation.blade.php" afterPath="$PROJECT_DIR$/app/views/site/navigation.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/queue.php" afterPath="$PROJECT_DIR$/app/config/queue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/emails/registration.blade.php" afterPath="$PROJECT_DIR$/app/views/emails/registration.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employers/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/employers/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs/show.blade.php" afterPath="$PROJECT_DIR$/app/views/jobs/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/alumnies/show.blade.php" afterPath="$PROJECT_DIR$/app/views/alumnies/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profiles/students/show.blade.php" afterPath="$PROJECT_DIR$/app/views/profiles/students/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/students/show.blade.php" afterPath="$PROJECT_DIR$/app/views/students/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/signin.blade.php" afterPath="$PROJECT_DIR$/app/views/site/signin.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contents/single.blade.php" afterPath="$PROJECT_DIR$/app/views/contents/single.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cso.iws" />
@@ -179,11 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="global.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/start/global.php">
+      <file leaf-file-name="JobsController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/JobsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6784074" vertical-offset="547" max-vertical-offset="1200">
-              <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.29862174" vertical-offset="180" max-vertical-offset="2580">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="45.291668" vertical-offset="1807" max-vertical-offset="2460">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -202,10 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/news_updates/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/news_updates/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/contents/single.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/news_updates/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/js/signup.js" />
         <option value="$PROJECT_DIR$/app/views/partials/modals/student_signup.blade.php" />
         <option value="$PROJECT_DIR$/app/views/site/signin.blade.php" />
@@ -215,7 +76,6 @@
         <option value="$PROJECT_DIR$/app/views/site/index-new.blade.php" />
         <option value="$PROJECT_DIR$/app/cso/registrations/registrants/RegistrantRepository.php" />
         <option value="$PROJECT_DIR$/app/cso/registrations/Registration.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/NewsUpdatesController.php" />
         <option value="$PROJECT_DIR$/app/cso/alumni/AlumniRepository.php" />
         <option value="$PROJECT_DIR$/app/cso/departments/DepartmentRepository.php" />
@@ -234,10 +94,8 @@
         <option value="$PROJECT_DIR$/app/cso/users/UserUtil.php" />
         <option value="$PROJECT_DIR$/app/cso/admin/AdminRepository.php" />
         <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/controllers/CoursesController.php" />
         <option value="$PROJECT_DIR$/app/controllers/DepartmentsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/JobsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/OrganisationsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/app/controllers/PsdpRegistrationsController.php" />
@@ -253,6 +111,13 @@
         <option value="$PROJECT_DIR$/app/models/Student.php" />
         <option value="$PROJECT_DIR$/app/models/Throttle.php" />
         <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/views/profiles/students/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/students/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/alumnies/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employers/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/JobsController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
   </component>
@@ -520,71 +385,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/cso/pages/SectionsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9770291" vertical-offset="277" max-vertical-offset="1020">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-            <element signature="e#111#143#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/registrations/jobs/JobRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.583333" vertical-offset="2752" max-vertical-offset="3405">
-          <caret line="214" column="43" selection-start-line="214" selection-start-column="43" selection-end-line="214" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/services/UserServices.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55130166" vertical-offset="0" max-vertical-offset="660">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/users/UserUtil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1026033" vertical-offset="0" max-vertical-offset="825">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/users/StudentRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8269525" vertical-offset="0" max-vertical-offset="675">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/alumni/AlumniRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.708333" vertical-offset="28" max-vertical-offset="705">
-          <caret line="34" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cso/repositories/Repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56355286" vertical-offset="1072" max-vertical-offset="1725">
-          <caret line="99" column="30" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cso/admin/AdminRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6202144" vertical-offset="0" max-vertical-offset="653">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding>
-            <element signature="e#107#139#0#PHP" expanded="true" />
+            <element signature="e#107#139#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,14 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15007657" vertical-offset="862" max-vertical-offset="1515">
           <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.0520673" vertical-offset="0" max-vertical-offset="5190">
-          <caret line="307" column="5" selection-start-line="307" selection-start-column="5" selection-end-line="307" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -665,14 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.045941807" vertical-offset="0" max-vertical-offset="1365">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/JobsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72434914" vertical-offset="1912" max-vertical-offset="2565">
-          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -925,10 +715,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4058193" vertical-offset="110" max-vertical-offset="5190">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/start/global.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6784074" vertical-offset="547" max-vertical-offset="1200">
           <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16079633" vertical-offset="0" max-vertical-offset="4515">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profiles/students/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/students/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45941806" vertical-offset="0" max-vertical-offset="3165">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="tag#style#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/alumnies/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06891271" vertical-offset="0" max-vertical-offset="1995">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employers/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7228178" vertical-offset="0" max-vertical-offset="1815">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/alumnies/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29862174" vertical-offset="0" max-vertical-offset="1290">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#545#582#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="45.291668" vertical-offset="1807" max-vertical-offset="2460">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/JobsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29862174" vertical-offset="180" max-vertical-offset="2580">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>

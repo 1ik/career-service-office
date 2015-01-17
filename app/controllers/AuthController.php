@@ -23,7 +23,7 @@ class AuthController extends Controller {
 
     public function getLogin()
     {
-        $organisations = $$this->orgs->all();
+        $organisations = $this->orgs->all();
         $departments = $this->depts->all();
         $courses = $this->courses->all();
         return View::make('site.signin', compact('organisations', 'courses', 'departments'));

@@ -64,6 +64,7 @@ class JobsController extends \BaseController {
         if($job) {
             $job = $this->jobs->find($job->id);
             Event::fire('jobs.posted', [$job, Sentry::getUser()]);
+            Session::put('successes', ['The Job has been posted. It will be published if approved by administrators.']);
             return Redirect::route("jobs.index");
         } else {
             return Redirect::back()->withErrors($this->jobs->get_errors());

@@ -13,11 +13,13 @@
 
 @section('action_bar')
 
+@if( ! \cso\utils\UserUtil::isEmployer())
 <li class="hidden-xs">
   <a href="{{URL::route('users.saved_jobs.index', Sentry::getUser()->id)}}">
     <i style="font-weight: 800; color:green" class="ti-bookmark-alt"></i>
   </a>
 </li>
+@endif
 
 @stop
 

@@ -55,17 +55,21 @@
               <h3>Contact Information : </h3>
 
               <p>
-                Office of Career Services & Alumni Relations (OCSAR), BRAC University, 49 Siddique Tower, (2nd Floor) Mohakhali, Dhaka- 1212; Bangladesh.Office of Career Services & Alumni Relations (OCSAR), BRAC University, 49 Siddique Tower, (2nd Floor) Mohakhali, Dhaka- 1212; Bangladesh.
+                Office of Career Services & Alumni Relations (OCSAR), <br/>
+                BRAC University, 49 Siddique Tower, (2nd Floor) <br/>
+                Mohakhali, Dhaka- 1212; Bangladesh.
               </p>
-
+              <!--
               <p style="font-size : 14px">
-                  <i class="fa fa-mobile" style="font-size:14px"></i> Ph: + 04478444073
+                  <i class="fa fa-mobile" style="font-size:14px"></i>
+              </p>
+              -->
+              <p style="font-size : 14px">
+                  <i class="fa fa-phone" style="font-size:14px"></i> + 04478444073
               </p>
               <p style="font-size : 14px">
-                  <i class="fa fa-phone" style="font-size:14px"></i> Ext  5078,
-              </p>
-              <p style="font-size : 14px">
-                  <i class="fa fa-envelope-o" style="font-size:14px"></i> Email: csoadmin@bracu.ac.bd; csotraining@bracu.ac.bd
+                  <i class="fa fa-envelope-o" style="font-size:14px"></i> csoadmin@bracu.ac.bd;
+                  <br/><i class="fa fa-envelope-o" style="font-size:14px"></i> csotraining@bracu.ac.bd
               </p>
             </div>
           </div>

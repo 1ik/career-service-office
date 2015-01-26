@@ -54,7 +54,7 @@
                                     <div class="col-xs-6">
                                         <div class="form-group">
                                             <label for="">Which Organisation?</label>
-                                            <select name="organisation_id" class="form-control" id="">
+                                            <select name="organisation_id" class="form-control" id="" @if( ! \cso\utils\UserUtil::isAdmin() ) disabled @endif >
                                             @foreach($organisations as $org)
                                                 <option value="{{$org->id}}" @if($job->organisation_id == $org->id) selected @endif >{{$org->name}}</option>
                                             @endforeach

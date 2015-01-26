@@ -27,7 +27,6 @@ class EmployerRepository extends Repository {
         return \Employer::with('user')->whereUserId($id)->get()->first();
     }
 
-
     public function all()
     {
         return \Employer::with('user.throttle', 'organisation')->get();

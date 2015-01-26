@@ -265,8 +265,7 @@ class AuthController extends Controller {
                 $message->to('careerservicesbracu@gmail.com'); // Recipient address
             });
 
-
-            return "Wow Your email is confirmed Thanks! You'll be notified if we think you worth to be with us! <br/> cheers!";
+            return View::make('partials.pages.email_confirmed');
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
@@ -292,6 +291,8 @@ class AuthController extends Controller {
                     $message->to($user->email); // Recipient address
                 });
 
+                Session::put('successes', ['The user has been activated']);
+
                 //redirect admin to user profile.
                 return Redirect::back();
 
@@ -302,8 +303,7 @@ class AuthController extends Controller {
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
             App::abort(404); //user was not found
 		} catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e) {
-		    echo 'User is already activated.';
-            App::abort(404);
+            App::abort(404);// user is already activated.
 		}
 	}
 

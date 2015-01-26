@@ -2,7 +2,9 @@
     $user = Sentry::getUser();
 ?>
 
-<header class="hidden sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+<!-- should show the header if we are seeing the page for a single content -->
+
+<header class="@if( ! isset($section) ) hidden @endif sticky navbar navbar-static-top bs-docs-nav" id="top" role="banner">
 <div class="container">
   <div class="navbar-header" style="width: 100%; background: #F2F2F2; text-align: center">
     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -18,29 +20,27 @@
 
   <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
     <ul class="nav navbar-nav">
-      <li class="@if($page->id == 2) {{'active'}} @endif">
-        <a href="internships-program">INTERNSHIPS</a>
+      <li class="@if( (isset($page) && $page->id == 2) || (isset($section) && $section->page_id == 2) ) {{'active'}} @endif">
+        <a href="{{URL::to('internships-program')}}">INTERNSHIPS</a>
       </li>
-
-      <li class="@if($page->id == 3) {{'active'}} @endif">
-        <a href="psdp-program">PSDP Programs</a>
+      <li class="@if( (isset($page) && $page->id == 3) || (isset($section) && $section->page_id == 3) ) {{'active'}} @endif">
+        <a href="{{URL::to('psdp-program')}}">PSDP Programs</a>
       </li>
-      <li class="@if($page->id == 4) {{'active'}} @endif">
-         <a href="searching-jobs">JOBS</a>
+      <li class="@if( (isset($page) && $page->id == 4) || (isset($section) && $section->page_id == 4) ) {{'active'}} @endif">
+         <a href="{{URL::to('searching-jobs')}}">JOBS</a>
       </li>
-      <li class="@if($page->id == 5) {{'active'}} @endif">
-        <a href="services-for-students">Students</a>
+      <li class="@if( (isset($page) && $page->id == 5) || (isset($section) && $section->page_id == 5) ) {{'active'}} @endif">
+        <a href="{{URL::to('services-for-students')}}">Students</a>
       </li>
-      <li class="@if($page->id == 6) {{'active'}} @endif">
-        <a href="alumnies">Alumnies</a>
+      <li class="@if( (isset($page) && $page->id == 6) || (isset($section) && $section->page_id == 6) ) {{'active'}} @endif">
+        <a href="{{URL::to('alumnies')}}">Alumnies</a>
       </li>
-      <li class="@if($page->id == 7) {{'active'}} @endif">
-        <a href="affiliated-organisations">Organisations</a>
+      <li class="@if( (isset($page) && $page->id == 7) || (isset($section) && $section->page_id == 7) ) {{'active'}} @endif">
+        <a href="{{URL::to('affiliated-organisations')}}">Organisations</a>
       </li>
       <li>
         <a href="../customize/">Contact us</a>
       </li>
-
     </ul>
     <ul class="nav navbar-nav navbar-right">
         @if(! Sentry::check())

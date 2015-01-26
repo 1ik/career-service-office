@@ -6,7 +6,7 @@
 
 @section('action_bar')
 
-@if(\cso\registrations\JobRepository::isJobPoster(Sentry::getUser()->id, $job->id))
+@if(\cso\registrations\JobRepository::isJobPoster(Sentry::getUser()->id, $job->id) || \cso\utils\UserUtil::isAdmin())
     <li class="hidden-xs">
       <a href="{{URL::route('jobs.edit', $job->id)}}">
         <i style="font-weight: 800; color:green" class="ti-pencil"></i>
@@ -38,7 +38,7 @@
         <a class="pull-right btn btn-default btn-sm" href="{{URL::route('jobs.index')}}">Jobs list</a>
         
         @if($job->registration->open == 1)
-            @if($job->applicant == null)
+            @if($job->applicant == null && \cso\utils\UserUtil::isStudent() || \cso\utils\UserUtil::isAlumni())
                 <a class="pull-right btn btn-default btn-sm" href="{{URL::route('jobs.apply', $job->id)}}">Apply</a>
             @endif
             @if(\cso\utils\UserUtil::isAdmin())

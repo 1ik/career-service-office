@@ -1,5 +1,10 @@
 <?php
 
+Route::get('boo', function(){
+    return View::make('partials.pages.email_confirmed');
+});
+
+
 /*--------------------------------------------------------------------------
 | Routes for Related to auth
 --------------------------------------------------------------------------*/
@@ -135,16 +140,6 @@ Route::resource('organisations', 'OrganisationsController');
 --------------------------------------------------------------------------*/
 Route::resource('organisation_types', 'OrganisationTypesController');
 
-
-/*--------------------------------------------------------------------------
-| Other routes.
---------------------------------------------------------------------------*/
-App::missing(function($exception)
-{
-    return Response::view('errors.missing', array(), 404);
-});
-
-
 /*--------------------------------------------------------------------------
 | Routes for landing pages.
 --------------------------------------------------------------------------*/
@@ -156,3 +151,12 @@ Route::get('/{slug?}', ['uses' => 'PagesController@show']);
 --------------------------------------------------------------------------*/
 Route::resource('sections', 'SectionsController'); //handles the sections.update route.
 Route::get('contents/{slug}', ['uses' => 'SectionsController@show']);
+
+
+/*--------------------------------------------------------------------------
+| Other routes.
+--------------------------------------------------------------------------*/
+App::missing(function($exception)
+{
+    return Response::view('partials.missing', array(), 404);
+});

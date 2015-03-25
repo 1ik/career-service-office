@@ -12,7 +12,6 @@ class CreateSectionsTable extends Migration {
 	 */
 	public function up()
 	{
-        /*
 		Schema::create('sections', function(Blueprint $table)
 		{
 			$table->increments('id');
@@ -23,7 +22,6 @@ class CreateSectionsTable extends Migration {
             $table->string('summery');
 			$table->timestamps();
 		});
-        */
 	}
 
 

@@ -12,7 +12,7 @@ class CreatePagesTable extends Migration {
 	 */
 	public function up()
 	{
-        /*
+        
 		Schema::create('pages', function(Blueprint $table)
 		{
 			$table->increments('id');
@@ -24,7 +24,7 @@ class CreatePagesTable extends Migration {
             $table->text('contents');
 			$table->timestamps();
 		});
-        */
+
 	}
 
 
